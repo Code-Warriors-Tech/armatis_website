@@ -44,7 +44,7 @@ const Footer = () => {
       <WrapperLayout className='mx-auto py-20'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           <FooterCard
-            title='About Prolio'
+            title='About Amarits'
             paragraph='We strive to business solutions ideal for small & large projects with customized project requirements.'
           >
             <div className='mt-3 flex items-center gap-3'>
@@ -73,14 +73,14 @@ const Footer = () => {
                   placeholder='Subscribe With Us'
                 />
               </div>
-              <button className='bg-green-600 hover:bg-green-700 rounded-full px-10 py-5 transition font-bold'>
+              <button className='bg-[#ED1969] rounded-full px-10 py-5 transition font-bold'>
                 Subscribe Now
               </button>
             </div>
           </FooterCard>
         </div>
         <div className='mt-10 border-t border-white/10 pt-5 text-center text-white/60 text-sm'>
-          &copy; {new Date().getFullYear()} Prolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Amarits. All rights reserved.
         </div>
       </WrapperLayout>
     </div>
