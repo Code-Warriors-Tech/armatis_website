@@ -45,7 +45,10 @@ const AboutUs = () => {
             <div className="flex items-center gap-4">
               <img src="/icons/icon-01.png" alt="icon" className="w-[50px]" />
               <div className="py-6 md:py-0">
-                <CustomTinyTitle text={`${<CountUp end={10} duration={2} />} years`} className="text-lg font-semibold text-black"/>
+                <h3 className="text-lg font-semibold text-black">
+                  <CountUp end={10} duration={2} /> years
+                </h3>
+
                 <CustomParagraph text="Working Experience" className="text-sm " />
               </div>
             </div>
