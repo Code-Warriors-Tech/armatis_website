@@ -9,7 +9,7 @@ import { Menu, X } from 'lucide-react'; // You can replace with any icon
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Our Services', href: '/services' },
+  { label: 'Our Services', href: '/service' },
   { label: 'Our Team', href: '/team' },
 ];
 

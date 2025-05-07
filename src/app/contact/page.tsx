@@ -31,10 +31,9 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="bg-blue-50">
+    <div className="bg-white">
       <CustomPageBanner
         text="Contact Us"
-        badge="We'd love to hear from you"
       />
       <div className="mt-20">
         <WrapperLayout className="flex flex-col lg:flex-row items-start justify-between gap-10">
