@@ -13,7 +13,7 @@ const IconCard = ({ icon }: { icon: React.ReactNode }) => {
 
 const ContectCard = ({ title, data }: { title: string; data: string }) => {
   return (
-    <div className='flex items-center gap-3'>
+    <div className='flex items-start gap-3'>
       <span className='font-bold'>{title}:</span>
       <p className='text-[16px]'>{data}</p>
     </div>
@@ -57,10 +57,9 @@ const Footer = () => {
 
           <FooterCard title='Contact Us' paragraph=''>
             <div className='space-y-3'>
-              <ContectCard title='Address' data='66 Guild Street 512B, Great North Town.' />
-              <ContectCard title='Mail' data='addyour@email' />
-              <ContectCard title='Phone' data='(+44) 123 456 789' />
-              <ContectCard title='Fax Id' data='(+1) 523-567-987' />
+              <ContectCard title='Address' data='IFZA Business Park, Building A2, Dubai Silicon Oasis, Mushraif, Dubai, United Arab Emirates' />
+              <ContectCard title='Mail' data='amarits.c@gmail.com' />
+              <ContectCard title='Phone/WhatsApp/Telegram' data='+351 961539027' />
             </div>
           </FooterCard>
 

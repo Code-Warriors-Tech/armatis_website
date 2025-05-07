@@ -32,7 +32,7 @@ const ChoseUs: React.FC = () => {
     <div className="mt-10 lg:mt-20 px-4 sm:px-6 lg:px-8">
       <WrapperLayout>
         {/* Intro Section */}
-        <div className="grid gap-10 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="lg:hidden">
             <img src="/images/about-10.jpg" className='w-full h-full' />
           </div>
@@ -65,18 +65,18 @@ const ChoseUs: React.FC = () => {
 const reasonData: ReasonCardProps[] = [
   {
     icon: '/icons/icon-05.png',
-    title: 'Cost Savings Ideas',
-    desc: 'Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+    title: 'Cost-Saving Innovation',
+    desc: 'We identify smart, scalable ways to cut expenses without compromising performance—driving efficiency and maximizing ROI.',
   },
   {
     icon: '/icons/icon-06.png',
-    title: 'Grow Your Business',
-    desc: 'Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+    title: 'Accelerated Growth',
+    desc: 'Our strategies are designed to fuel business expansion, unlock new markets, and build a strong, future-ready foundation.',
   },
   {
     icon: '/icons/icon-07.png',
-    title: 'Award Winning',
-    desc: 'Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+    title: 'Proven Excellence',
+    desc: 'Recognized for quality and results, we bring award-winning expertise to every project we lead and every goal we help you achieve.',
   },
 ];
 

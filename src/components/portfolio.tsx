@@ -5,16 +5,32 @@ import PortfolioCard from './portfolios/portfolio-card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules'; // Import Autoplay
+import { Pagination, Autoplay } from 'swiper/modules';
 import TitleBadge from './shared/title-badge';
 import CustomLinkButton from './shared/custom-link-button';
 import CustomSubtitle from './shared/custom-subtitle';
 
 const portfolioItems = [
-  { image: '/images/portfolio-01.jpg', tag: 'Business', title: 'Business Consultation' },
-  { image: '/images/portfolio-02.jpg', tag: 'Agency', title: 'Data Analytics' },
-  { image: '/images/portfolio-03.jpg', tag: 'Marketing', title: 'Digital Marketing' },
-  { image: '/images/portfolio-04.jpg', tag: 'FINANCE', title: 'Finance Strategy' },
+  {
+    image: '/images/portfolio-01.jpg',
+    tag: 'IT Strategy',
+    title: 'Digital Transformation & System Architecture',
+  },
+  {
+    image: '/images/portfolio-02.jpg',
+    tag: 'Data & AI',
+    title: 'AI & Data Analytics for Strategic Decision-Making',
+  },
+  {
+    image: '/images/portfolio-03.jpg',
+    tag: 'Cybersecurity',
+    title: 'Cybersecurity & Compliance Consulting',
+  },
+  {
+    image: '/images/portfolio-04.jpg',
+    tag: 'Events',
+    title: 'Technical & Scientific Event Management',
+  },
 ];
 
 const Portfolio = () => {
@@ -23,22 +39,22 @@ const Portfolio = () => {
       <WrapperLayout>
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-0">
           <div className="max-w-xl">
-            <TitleBadge text="Portfolio" />
-            <CustomSubtitle text="We are a creative digital marketing agency" />
+            <TitleBadge text="OUR WORK" />
+            <CustomSubtitle text="Tailored Consulting for Technology & Research" />
           </div>
 
-          <CustomLinkButton text='View Portfolio' />
+          <CustomLinkButton text="View All Projects" />
         </div>
       </WrapperLayout>
 
       <div className="p-5 lg:mt-10">
         <Swiper
-          modules={[Pagination, Autoplay]} // Add Autoplay module
+          modules={[Pagination, Autoplay]}
           spaceBetween={20}
-          loop={true} // Enable infinite loop
+          loop={true}
           autoplay={{
-            delay: 3000, // Delay between slides (3s)
-            disableOnInteraction: false, // Keep autoplay even after interaction
+            delay: 3000,
+            disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
           slidesPerView={1}

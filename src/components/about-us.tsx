@@ -5,30 +5,31 @@ import TitleBadge from "./shared/title-badge";
 import CustomSubtitle from "./shared/custom-subtitle";
 import CustomParagraph from "./shared/custom-paragraph";
 import CustomTinyTitle from "./shared/custom-tiny-title";
+import CountUp from "react-countup";
 
 const tabs = [
   {
-    text: 'DISCOVER',
-    desc: 'We see our clients as strategic partners. This means in close cooperation. We see our clients as strategic partners. This means in close cooperation.'
+    text: 'TECH & SYSTEMS',
+    desc: 'We help organizations navigate digital transformation through strategic IT consulting, system integration, AI-driven solutions, cybersecurity, and custom software development tailored to business needs.',
   },
   {
-    text: 'PLANNING',
-    desc: 'We see our clients as strategic partners. This means in close cooperation. We see our clients as strategic partners. This means in close.'
+    text: 'EVENT MANAGEMENT',
+    desc: 'We provide end-to-end management for technical and scientific events—from concept and logistics to speaker curation and tech-enabled execution—delivering seamless and impactful experiences.',
   },
   {
-    text: 'MARKETING',
-    desc: 'We see our clients as strategic partners. This means in close cooperation. We see our clients as strategic partners. This means in close.'
-  }
+    text: 'STRATEGIC PARTNER',
+    desc: 'We work side-by-side with businesses, institutions, and research bodies to align vision with execution, offering tailored, innovative strategies for sustainable success.',
+  },
 ];
 
 const AboutUs = () => {
-  const [active, setActive] = useState('DISCOVER');
+  const [active, setActive] = useState('TECH & SYSTEMS');
   const activeDesc = tabs.find((item) => item.text === active);
 
   return (
     <div className="py-10 lg:py-20">
       <WrapperLayout className="mx-auto grid lg:grid-cols-2 items-center gap-16">
-        
+
         {/* Image Section */}
         <div className="relative h-[560px] flex items-center gap-5 justify-center">
           <div className="w-[40%] h-full rounded-lg overflow-hidden hidden lg:block">
@@ -44,7 +45,7 @@ const AboutUs = () => {
             <div className="flex items-center gap-4">
               <img src="/icons/icon-01.png" alt="icon" className="w-[50px]" />
               <div className="py-6 md:py-0">
-                <CustomTinyTitle text="42 years" className="text-lg font-semibold text-black"/>
+                <CustomTinyTitle text={`${<CountUp end={10} duration={2} />} years`} className="text-lg font-semibold text-black"/>
                 <CustomParagraph text="Working Experience" className="text-sm " />
               </div>
             </div>
@@ -54,7 +55,7 @@ const AboutUs = () => {
         {/* Text Section */}
         <div>
           <TitleBadge text="ABOUT US" />
-          <CustomSubtitle text=" Your partner in corporate strategy" />
+          <CustomSubtitle text="Modern consulting for digital innovation" />
 
           {/* Tabs */}
           <div className="flex flex-wrap gap-6 my-4">
@@ -72,17 +73,16 @@ const AboutUs = () => {
           </div>
 
           {/* Description */}
-           <CustomParagraph text={activeDesc?.desc} />
+          <CustomParagraph text={activeDesc?.desc} />
 
-          {/* Progress Example */}
-          <div className="mb-8 max-w-[550px]">
-            <div className="flex justify-between text-sm font-semibold">
-              <span>Business Strategy</span>
-              <span>50%</span>
-            </div>
-            <div className="w-full bg-gray-200 h-2 rounded-full mt-2">
-              <div className="w-[50%] h-full bg-[#ED1969] rounded-full"></div>
-            </div>
+          {/* Expertise Summary */}
+          <div className="my-8">
+            <p className="font-semibold mb-2 text-sm">Our Core Expertise:</p>
+            <ul className="list-disc ml-5 text-sm text-gray-700 space-y-1">
+              <li>Digital transformation through IT strategy & AI integration</li>
+              <li>Comprehensive technical and scientific event management</li>
+              <li>Cybersecurity, system architecture, and optimization</li>
+            </ul>
           </div>
 
           {/* Team Lead */}
@@ -93,11 +93,12 @@ const AboutUs = () => {
               className="w-[60px] h-[60px] rounded-full object-cover"
             />
             <div>
-              <CustomTinyTitle text="Young Savage" className="text-black font-medium"/>
-              <CustomParagraph text='Head of Corporate' className="text-sm" />
+              <CustomTinyTitle text="Dr. Amara Ekwe" className="text-black font-medium"/>
+              <CustomParagraph text="Principal Consultant, AMARITS Consulting" className="text-sm" />
             </div>
           </div>
         </div>
+
       </WrapperLayout>
     </div>
   );

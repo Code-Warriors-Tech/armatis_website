@@ -1,66 +1,70 @@
 'use client';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
+import { useEffect, useState } from 'react';
 import CustomLinkButton from './shared/custom-link-button';
 
 const slides = [
   {
     image: '/images/hero-1.jpg',
-    heading: 'Business Solutions that Deliver',
-    subtext: 'Empowering brands with strategy, design, and digital excellence.',
+    heading: 'Empowering Your Mission with Insight & Strategy',
+    subtext: 'AMARITS delivers digital solutions, research, and innovation to drive real impact.',
   },
   {
     image: '/images/hero-2.jpg',
-    heading: 'Your Trusted Consultancy Partner',
-    subtext: 'We help companies grow, adapt, and succeed in competitive markets.',
+    heading: 'Guiding Digital Transformation with Expertise & Innovation',
+    subtext: 'We help organizations adapt, scale, and thrive through expert consulting.',
   },
   {
     image: '/images/hero-3.jpg',
-    heading: 'Data-Driven Strategies',
-    subtext: 'Turn insights into action with our expert consultancy services.',
+    heading: 'Transforming Data into Results with Precision & Purpose',
+    subtext: 'Transform insights into actions with our data-driven and research-backed solutions.',
   },
 ];
 
 const HeroProfessional = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+        setFade(true);
+      }, 300); // fade-out duration
+    }, 5000); // change every 5s
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const { image, heading, subtext } = slides[currentIndex];
+
   return (
-    <section className="w-full h-[100vh] grid grid-cols-1 md:grid-cols-2 bg-[#14212B] text-white overflow-hidden">
+    <section className="w-full h-[100vh] grid grid-cols-1 md:grid-cols-2 bg-[#14212B] text-white overflow-hidden relative">
       {/* Left: Content */}
-      <div className="flex flex-col justify-center px-8 md:px-16 z-10">
+      <div className="flex flex-col justify-center px-8 md:px-16 z-20 transition-opacity duration-500" style={{ opacity: fade ? 1 : 0 }}>
         <div className="max-w-xl space-y-6">
-          <p className="text-sm uppercase font-medium tracking-widest">Strategy & Innovation</p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Transform Your Business with Expert Guidance
-          </h1>
-          <p className="text-lg">
-            Discover modern consultancy services tailored to your business needs. Grow with confidence and clarity.
+          <p className="text-sm uppercase font-medium tracking-widest">
+            IT Strategy • Research • Innovation
           </p>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            {heading}
+          </h1>
+          <p className="text-lg">{subtext}</p>
           <div className="pt-4">
-            <CustomLinkButton text='Get Free Consultation' />
+            <CustomLinkButton text="Request a Consultation" />
           </div>
         </div>
       </div>
 
-      {/* Right: Image Carousel */}
+      {/* Right: Background Image */}
       <div className="relative h-full w-full">
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/40 z-10"></div>
-        <Swiper
-          modules={[Autoplay, EffectFade]}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          loop
-          effect="fade"
-          className="w-full h-full"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
-              ></div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/40 z-10" />
+        <img
+          key={image}
+          src={image}
+          alt={heading}
+          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out z-0 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        />
       </div>
     </section>
   );
