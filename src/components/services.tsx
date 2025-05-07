@@ -14,27 +14,26 @@ const Services = () => {
             <CustomSubtitle text="We are dedicated to serve you all time" className="text-white"/>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <ServiceCard 
-            image="/images/service-01.jpg" 
-            icon="/icons/icon-02.png" 
-            title="Information Technology and Systems Solutions" 
-            desc="We help businesses unlock digital transformation through customized IT systems, software development, cloud integration, and infrastructure optimization. Our solutions are designed to enhance performance, reduce costs, and align technology with your business goals." 
-          />
+            <ServiceCard 
+              image="/images/service-01.jpg" 
+              icon="/icons/icon-02.png" 
+              title="Information Technology and Systems Solutions" 
+              desc="We build custom IT systems to enhance performance, lower costs, and align technology with business objectives." 
+            />
 
-          <ServiceCard 
-            image="/images/service-02.jpg" 
-            icon="/icons/icon-03.png" 
-            title="Technical and Scientific Event Management" 
-            desc="We deliver full-spectrum management for conferences, seminars, and scientific exhibitions—handling logistics, technology, speaker coordination, and audience engagement. Our team ensures every event is professionally executed with precision and impact." 
-          />
+            <ServiceCard 
+              image="/images/service-02.jpg" 
+              icon="/icons/icon-03.png" 
+              title="Technical and Scientific Event Management" 
+              desc="We manage scientific events with expert planning, logistics, and tech support to ensure smooth execution." 
+            />
 
-          <ServiceCard 
-            image="/images/service-03.jpg" 
-            icon="/icons/icon-04.png" 
-            title="Business Planning" 
-            desc="We provide strategic business consulting, market research, and operational planning to help companies launch, scale, and optimize. Our approach blends insight with innovation, guiding your business toward sustainable success in a competitive landscape." 
-          />
-
+            <ServiceCard 
+              image="/images/service-03.jpg" 
+              icon="/icons/icon-04.png" 
+              title="Business Planning" 
+              desc="We provide market-driven consulting and planning services to help businesses scale, innovate, and thrive." 
+            />
           </div>
         </WrapperLayout>
       </div>
