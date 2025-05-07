@@ -1,11 +1,16 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
-const WrapperLayout = ({children, className}: {children: ReactNode, className?: any}) => {
-  return (
-    <div className={`lg:w-[1200px] ${className}`}>
-        {children}
-    </div>
-  )
+interface WrapperLayoutProps {
+  children: ReactNode;
+  className?: string;
 }
 
-export default WrapperLayout
+const WrapperLayout = ({ children, className = '' }: WrapperLayoutProps) => {
+  return (
+    <div className={`w-full max-w-[1360px] px-5 lg:px-10 mx-auto ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default WrapperLayout;
