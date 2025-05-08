@@ -35,7 +35,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
         className="overflow-hidden transition-max-height duration-500 ease-in-out"
       >
         <div className="p-4 text-gray-600">
-          <CustomParagraph text={content} className="text-sm" />
+          <CustomParagraph text={content} className="text-lg md:text-xl" />
         </div>
       </div>
     </div>

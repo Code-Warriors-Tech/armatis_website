@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomParagraph from '../shared/custom-paragraph';
 import CustomTinyTitle from '../shared/custom-tiny-title';
+import Link from 'next/link';
 
 interface ServiceCardProps {
   image: string;
@@ -12,19 +13,23 @@ interface ServiceCardProps {
 const ServiceCard = ({ image, icon, title, desc }: ServiceCardProps) => {
   return (
     <div className="relative">
-      <img src={image} alt={title} className="rounded-lg w-full h-auto object-cover" />
-      <div className="text-center mx-auto bg-white w-[90%] rounded-lg relative -top-10 shadow-md">
-        <div className="relative h-12 -top-10">
-          <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center bg-white shadow">
+      {/* Image container with fixed height */}
+      <div className="w-full h-[250px] overflow-hidden rounded-lg">
+        <img src={image} alt={title} className="w-full h-full object-cover" />
+      </div>
+
+      <div className="mx-auto bg-white w-[85%] rounded-lg relative -top-10 flex shadow-md pt-5">
+        <div className="relative -left-5 w-[65px]">
+          <div className="w-20 h-20 mx-auto flex items-center justify-center bg-[#ED1969] shadow">
             <img src={icon} alt={title} className="w-12 h-12 object-contain" />
           </div>
         </div>
-        <div className="px-5 pb-5">
-          <CustomTinyTitle text={title} className="text-black font-medium"/>
-          <CustomParagraph text={desc} className="text-sm" />
-        </div>
-        <div className="border-t border-gray-200 py-3">
-          <a href="#" className="text-sm text-[#ED1969] font-medium">Read More</a>
+        <div className="px-5">
+          <CustomTinyTitle text={title} className="text-black font-semibold text-2xl"/>
+          <CustomParagraph text={desc} className="py-3 text-lg" />
+          <div className="mb-3">
+            <Link href="#" className="text-black underline hover:text-[#ED1969] text-sm">EXPLORE MORE</Link>
+          </div>
         </div>
       </div>
     </div>

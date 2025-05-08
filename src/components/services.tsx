@@ -1,8 +1,14 @@
+'use client';
 import React from 'react';
 import WrapperLayout from '@/layout/wrapper-layout';
 import ServiceCard from './service/service-card';
 import TitleBadge from './shared/title-badge';
 import CustomSubtitle from './shared/custom-subtitle';
+
+// Import Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 const Services = () => {
   return (
@@ -13,28 +19,54 @@ const Services = () => {
             <TitleBadge text="SERVICES" className="mx-auto" />
             <CustomSubtitle text="We are dedicated to serve you all time" className="text-white"/>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <ServiceCard 
-              image="/images/service-01.jpg" 
-              icon="/icons/icon-02.png" 
-              title="Information Technology and Systems Solutions" 
-              desc="We build custom IT systems to enhance performance, lower costs, and align technology with business objectives." 
-            />
 
-            <ServiceCard 
-              image="/images/service-02.jpg" 
-              icon="/icons/icon-03.png" 
-              title="Technical and Scientific Event Management" 
-              desc="We manage scientific events with expert planning, logistics, and tech support to ensure smooth execution." 
-            />
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            modules={[Autoplay]}
+          >
+            <SwiperSlide>
+              <ServiceCard 
+                image="/images/service-01.jpg" 
+                icon="/icons/icon-10.png" 
+                title="Financial Guidance" 
+                desc="We focus on the best practices for it solutions and services."
+              />
+            </SwiperSlide>
 
-            <ServiceCard 
-              image="/images/service-03.jpg" 
-              icon="/icons/icon-04.png" 
-              title="Business Planning" 
-              desc="We provide market-driven consulting and planning services to help businesses scale, innovate, and thrive." 
-            />
-          </div>
+            <SwiperSlide>
+              <ServiceCard 
+                image="/images/service-02.jpg" 
+                icon="/icons/icon-11.png" 
+                title="Business Campaign" 
+                desc="We focus on the best practices for it solutions and services." 
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <ServiceCard 
+                image="/images/service-03.jpg" 
+                icon="/icons/icon-12.png" 
+                title="Business Planning" 
+                desc="We focus on the best practices for it solutions and services." 
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <ServiceCard 
+                image="/images/service-10.jpg" 
+                icon="/icons/icon-13.png" 
+                title="Business Planning" 
+                desc="We focus on the best practices for it solutions and services." 
+              />
+            </SwiperSlide>
+          </Swiper>
         </WrapperLayout>
       </div>
     </div>

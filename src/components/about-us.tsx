@@ -76,12 +76,12 @@ const AboutUs = () => {
           </div>
 
           {/* Description */}
-          <CustomParagraph text={activeDesc?.desc} />
+          <CustomParagraph text={activeDesc?.desc} className="text-lg md:text-xl" />
 
           {/* Expertise Summary */}
           <div className="my-8">
-            <p className="font-semibold mb-2 text-sm">Our Core Expertise:</p>
-            <ul className="list-disc ml-5 text-sm text-gray-700 space-y-1">
+            <p className="font-semibold mb-2 text-lg text-black">Our Core Expertise:</p>
+            <ul className="list-disc ml-5 text-lg text-gray-700 space-y-1">
               <li>Digital transformation through IT strategy & AI integration</li>
               <li>Comprehensive technical and scientific event management</li>
               <li>Cybersecurity, system architecture, and optimization</li>
@@ -97,7 +97,7 @@ const AboutUs = () => {
             />
             <div>
               <CustomTinyTitle text="Dr. Amara Ekwe" className="text-black font-medium"/>
-              <CustomParagraph text="Principal Consultant, AMARITS Consulting" className="text-sm" />
+              <CustomParagraph text="Principal Consultant, AMARITS Consulting" className="text-lg md:text-xl" />
             </div>
           </div>
         </div>

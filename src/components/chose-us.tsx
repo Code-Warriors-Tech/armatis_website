@@ -20,7 +20,7 @@ const ReasonCard: React.FC<ReasonCardProps> = ({ icon, title, desc }) => {
         <img src={icon} alt="icon" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
       </div>
       <div>
-        <CustomTinyTitle text={title} className="text-black font-medium"/>
+        <CustomTinyTitle text={title} className="text-black font-medium text-lg"/>
         <CustomParagraph text={desc} className="text-sm" />
       </div>
     </div>
@@ -39,7 +39,10 @@ const ChoseUs: React.FC = () => {
           <div className="space-y-5">
             <TitleBadge text="Why Choose Us" />
             <CustomSubtitle text=" Why choose our business solutions?" />
-            <CustomParagraph text="Our team is a diverse network of consultants and industry professionals with a global mindset and a collaborative culture. We work to understand your issues and are driven to ask better questions." />
+            <CustomParagraph 
+              text="Our team is a diverse network of consultants and industry professionals with a global mindset and a collaborative culture. We work to understand your issues and are driven to ask better questions." 
+              className="text-lg md:text-xl"
+            />
 
             <CustomLinkButton text='More About Us' />
           </div>

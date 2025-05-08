@@ -32,7 +32,7 @@ const FooterCard = ({
   return (
     <div>
       <h1 className='mb-5 font-bold text-2xl text-white'>{title}</h1>
-      <p className='text-[16px] text-white/80'>{paragraph}</p>
+      <p className="text-lg md:text-xl text-white">{paragraph}</p>
       <div className='mt-5'>{children}</div>
     </div>
   )
