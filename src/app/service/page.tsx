@@ -10,8 +10,7 @@ const ServicePage = () => {
   return (
     <div className='bg-white text-black'>
         <CustomPageBanner
-            text="Our Services"
-        />
+        text="Our Services" badge={''}        />
         <Business />
         <div className='mt-10'>
           <Process />
