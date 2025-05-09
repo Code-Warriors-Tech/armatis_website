@@ -1,12 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react'
+import React from 'react';
 
-const CustomParagraph = ({text, className}: any) => {
-  return (
-    <p className={`text-gray-700 text-sm sm:text-base ${className}`}>
-        {text}
-    </p>
-  )
+interface CustomParagraphProps {
+  text: string;
+  className?: string;
 }
 
-export default CustomParagraph
+const CustomParagraph: React.FC<CustomParagraphProps> = ({ text, className = '' }) => {
+  return (
+    <p className={`text-gray-700 text-sm sm:text-base ${className}`}>
+      {text}
+    </p>
+  );
+};
+
+export default CustomParagraph;

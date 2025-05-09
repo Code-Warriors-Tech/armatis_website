@@ -9,8 +9,10 @@ import CustomSubtitle from './shared/custom-subtitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { services } from '@/constant/data';
 
 const Services = () => {
+
   return (
     <div className="mt-10 lg:mt-20 px-0 lg:px-5">
       <div className="bg-[#14212B] p-6 lg:p-20 rounded-xl">
@@ -31,41 +33,17 @@ const Services = () => {
             }}
             modules={[Autoplay]}
           >
-            <SwiperSlide>
-              <ServiceCard 
-                image="/images/service-01.jpg" 
-                icon="/icons/icon-10.png" 
-                title="Financial Guidance" 
-                desc="We focus on the best practices for it solutions and services."
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ServiceCard 
-                image="/images/service-02.jpg" 
-                icon="/icons/icon-11.png" 
-                title="Business Campaign" 
-                desc="We focus on the best practices for it solutions and services." 
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ServiceCard 
-                image="/images/service-03.jpg" 
-                icon="/icons/icon-12.png" 
-                title="Business Planning" 
-                desc="We focus on the best practices for it solutions and services." 
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ServiceCard 
-                image="/images/service-10.jpg" 
-                icon="/icons/icon-13.png" 
-                title="Business Planning" 
-                desc="We focus on the best practices for it solutions and services." 
-              />
-            </SwiperSlide>
+            {/* Map through the services array */}
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <ServiceCard
+                  image={service.image}
+                  icon={service.icon}
+                  title={service.title}
+                  desc={service.desc}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </WrapperLayout>
       </div>

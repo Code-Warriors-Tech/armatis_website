@@ -5,6 +5,7 @@ import CustomLinkButton from './shared/custom-link-button';
 import CustomSubtitle from './shared/custom-subtitle';
 import CustomParagraph from './shared/custom-paragraph';
 import CustomTinyTitle from './shared/custom-tiny-title';
+import { reasonData } from '@/constant/data';
 
 // Interface for ReasonCard props
 interface ReasonCardProps {
@@ -63,24 +64,5 @@ const ChoseUs: React.FC = () => {
     </div>
   );
 };
-
-// Optional: Move data outside component for cleaner structure
-const reasonData: ReasonCardProps[] = [
-  {
-    icon: '/icons/icon-05.png',
-    title: 'Cost-Saving Innovation',
-    desc: 'We identify smart, scalable ways to cut expenses without compromising performance—driving efficiency and maximizing ROI.',
-  },
-  {
-    icon: '/icons/icon-06.png',
-    title: 'Accelerated Growth',
-    desc: 'Our strategies are designed to fuel business expansion, unlock new markets, and build a strong, future-ready foundation.',
-  },
-  {
-    icon: '/icons/icon-07.png',
-    title: 'Proven Excellence',
-    desc: 'Recognized for quality and results, we bring award-winning expertise to every project we lead and every goal we help you achieve.',
-  },
-];
 
 export default ChoseUs;

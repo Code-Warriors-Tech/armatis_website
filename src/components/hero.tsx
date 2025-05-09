@@ -1,24 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import CustomLinkButton from './shared/custom-link-button';
-
-const slides = [
-  {
-    image: '/images/hero-1.jpg',
-    heading: 'Empowering Your Mission with Insight & Strategy',
-    subtext: 'AMARITS delivers digital solutions, research, and innovation to drive real impact.',
-  },
-  {
-    image: '/images/hero-2.jpg',
-    heading: 'Guiding Digital Transformation with Expertise & Innovation',
-    subtext: 'We help organizations adapt, scale, and thrive through expert consulting.',
-  },
-  {
-    image: '/images/hero-3.jpg',
-    heading: 'Transforming Data into Results with Precision & Purpose',
-    subtext: 'Transform insights into actions with our data-driven and research-backed solutions.',
-  },
-];
+import { slides } from '@/constant/data';
 
 const HeroProfessional = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

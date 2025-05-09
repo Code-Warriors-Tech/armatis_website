@@ -5,10 +5,10 @@ import React from 'react'
 const AboutPage: React.FC = () => {
     return (
         <div className='bg-white text-black'>
-                <CustomPageBanner
-                    text="About Us"       
-                />
-                <About/>
+            <CustomPageBanner
+                text="About Us"       
+            />
+            <About/>
         </div>
     )
 }

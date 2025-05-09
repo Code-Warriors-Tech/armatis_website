@@ -1,12 +1,7 @@
 'use client';
 import React from 'react';
 import WrapperLayout from '@/layout/wrapper-layout';
-
-const partnerLogos = [
-  '/images/partners/image-5.png',
-  '/images/partners/image-6.png',
-  '/images/partners/image-7.png',
-];
+import { partnerLogos } from '@/constant/data';
 
 const Partner = () => {
   return (
