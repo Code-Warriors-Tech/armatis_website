@@ -16,10 +16,10 @@ const ContactDetails = () => (
       </div>
       <CustomTinyTitle text="Email" className="text-black font-semibold text-lg" />
       <a
-        href="mailto:muctarmohammed07@gmail.com"
+        href="E-mail: amarits.c@gmail.com"
         className="text-blue-600 hover:underline"
       >
-        muctarmohammed07@gmail.com
+        amarits.c@gmail.com
       </a>
     </div>
 
@@ -29,7 +29,7 @@ const ContactDetails = () => (
         <Phone size={30} />
       </div>
       <CustomTinyTitle text="Phone" className="text-black font-semibold text-lg" />
-      <CustomParagraph text="+234 812 345 6789" />
+      <CustomParagraph text="+351 961539027" />
     </div>
 
     {/* Office Location Section */}
@@ -37,8 +37,10 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <MapPin size={30} />
       </div>
-      <CustomTinyTitle text="Office Location" className="text-black font-semibold text-lg" />
-      <CustomParagraph text="3rd Floor, Innovation Hub, Abuja, Nigeria" />
+      <CustomTinyTitle text="Headquarters" className="text-black font-semibold text-lg" />
+      <CustomParagraph text=" IFZA Business Park, Building A2, Dubai Silicon Oasis, Mushraif, Dubai, United Arab Emirates " />
+      <CustomTinyTitle text="Worldwide:" className="text-black font-semibold text-lg" />
+      <CustomParagraph text=" Pc. 9 de Abril, 26, 4200-422 Porto, Portugal " />
     </div>
     
   </div>
