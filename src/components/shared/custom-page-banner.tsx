@@ -3,7 +3,6 @@ import CustomSubtitle from './custom-subtitle';
 
 interface CustomPageBannerProps {
   text: string;
-  badge: string;
 }
 
 const CustomPageBanner: React.FC<CustomPageBannerProps> = ({ text }) => {

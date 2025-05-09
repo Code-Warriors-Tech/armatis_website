@@ -6,7 +6,8 @@ const AboutPage: React.FC = () => {
     return (
         <div className='bg-white text-black'>
                 <CustomPageBanner
-                text="About Us" badge={''}        />
+                    text="About Us"       
+                />
                 <About/>
         </div>
     )
