@@ -9,12 +9,12 @@ import CountUp from "react-countup";
 
 const tabs = [
   {
-    text: 'TECH & SYSTEMS',
-    desc: 'We help organizations navigate digital transformation through strategic IT consulting, system integration, AI-driven solutions, cybersecurity, and custom software development tailored to business needs.',
+    text: 'Mission',
+    desc: 'At AMARITS Consulting, we provide innovative Information Systems and Technology solutions to drive digital transformation and business success. We also specialize in the organization and management of technical and scientific events, fostering knowledge exchange and collaboration. Our mission is to deliver tailored, high-quality solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence.',
   },
   {
-    text: 'EVENT MANAGEMENT',
-    desc: 'We provide end-to-end management for technical and scientific events—from concept and logistics to speaker curation and tech-enabled execution—delivering seamless and impactful experiences.',
+    text: 'Vision',
+    desc: 'Our vision is to be a trusted leader in Information Systems and Technology consulting, driving innovation and digital transformation. We strive to set the standard in technical and scientific event management, fostering collaboration and knowledge exchange. Through cutting-edge solutions and ethical excellence, we aim to shape the future of organizations, research, and technology.',
   },
   {
     text: 'STRATEGIC PARTNER',
@@ -80,29 +80,45 @@ const AboutUs = () => {
 
           {/* Expertise Summary */}
           <div className="my-8">
-            <p className="font-semibold mb-2 text-lg text-black">Our Core Expertise:</p>
-            <ul className="list-disc ml-5 text-lg text-gray-700 space-y-1">
-              <li>Digital transformation through IT strategy & AI integration</li>
-              <li>Comprehensive technical and scientific event management</li>
-              <li>Cybersecurity, system architecture, and optimization</li>
-            </ul>
+            <p className="font-semibold mb-2 text-lg text-black">Values</p>
+            <p className="text-md text-gray-700 mb-4">
+              At AMARITS Consulting, our values define who we are and guide our actions in every project, partnership, and engagement. We are committed to upholding the highest standards of integrity, innovation, and excellence in everything we do.
+              We are committed to delivering high-quality, tailored solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence.
+            </p>
           </div>
 
           {/* Team Lead */}
           <div className="flex items-center gap-3">
             <img
-              src="/images/service-01.jpg"
+              src="/images/partners/alvaro.jpg"
               alt="team"
               className="w-[60px] h-[60px] rounded-full object-cover"
             />
             <div>
-              <CustomTinyTitle text="Dr. Amara Ekwe" className="text-black font-medium"/>
-              <CustomParagraph text="Principal Consultant, AMARITS Consulting" className="text-lg md:text-xl" />
+              <CustomTinyTitle text="Álvaro Rocha " className="text-black font-medium"/>
+              <CustomParagraph text="Chairman, AMARITS Consulting" className="text-lg md:text-xl" />
             </div>
           </div>
         </div>
-
+        
       </WrapperLayout>
+
+      {/* Values Section */}
+      <div className="py-10 lg:py-20">
+        <WrapperLayout className="mx-auto items-center gap-16">
+          <ul className="list-disc ml-5 text-lg text-gray-700 space-y-1">
+              <li>Innovation & Excellence – We embrace cutting-edge technologies and best practices to deliver high-quality, forward-thinking solutions in Information Systems and Technology consulting and event management.</li>
+              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
+              <li>Client-Centric Approach – Our clients’ success is our priority. We tailor our solutions to their unique needs, providing personalized strategies that drive measurable impact and long-term value.</li>
+              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
+              <li>Sustainability & Social Responsibility – We are committed to sustainable digital transformation and responsible event management, ensuring that our solutions and initiatives contribute positively to society and the environment.</li>
+              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
+              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
+              <li>Collaboration & Partnership – We believe in the power of collaboration. By working closely with our clients, partners, and stakeholders, we foster a culture of knowledge exchange and innovation that drives success.</li>
+            </ul>
+            <p className="text-lg text-gray-700">By staying true to these values, AMARITS Consulting strives to be a trusted and transformative force in Information Systems, Technology Consulting, and Scientific Event Management worldwide.</p>
+        </WrapperLayout>
+      </div>
     </div>
   );
 };
