@@ -10,7 +10,7 @@ interface ServiceCardProps {
   desc: string;
 }
 
-const ServiceCard = ({ image, icon, title, desc }: ServiceCardProps) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon, title, desc }) => {
   return (
     <div className="relative">
       {/* Image container with fixed height */}

@@ -9,29 +9,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import TitleBadge from './shared/title-badge';
 import CustomLinkButton from './shared/custom-link-button';
 import CustomSubtitle from './shared/custom-subtitle';
-
-const portfolioItems = [
-  {
-    image: '/images/portfolio-01.jpg',
-    tag: 'IT Strategy',
-    title: 'Digital Transformation & System Architecture',
-  },
-  {
-    image: '/images/portfolio-02.jpg',
-    tag: 'Data & AI',
-    title: 'AI & Data Analytics for Strategic Decision-Making',
-  },
-  {
-    image: '/images/portfolio-03.jpg',
-    tag: 'Cybersecurity',
-    title: 'Cybersecurity & Compliance Consulting',
-  },
-  {
-    image: '/images/portfolio-04.jpg',
-    tag: 'Events',
-    title: 'Technical & Scientific Event Management',
-  },
-];
+import { portfolioItems } from '@/constant/data';
 
 const Portfolio = () => {
   return (

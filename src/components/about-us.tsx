@@ -6,21 +6,8 @@ import CustomSubtitle from "./shared/custom-subtitle";
 import CustomParagraph from "./shared/custom-paragraph";
 import CustomTinyTitle from "./shared/custom-tiny-title";
 import CountUp from "react-countup";
+import { tabs } from "@/constant/data";
 
-const tabs = [
-  {
-    text: 'TECH & SYSTEMS',
-    desc: 'We help organizations navigate digital transformation through strategic IT consulting, system integration, AI-driven solutions, cybersecurity, and custom software development tailored to business needs.',
-  },
-  {
-    text: 'EVENT MANAGEMENT',
-    desc: 'We provide end-to-end management for technical and scientific events—from concept and logistics to speaker curation and tech-enabled execution—delivering seamless and impactful experiences.',
-  },
-  {
-    text: 'STRATEGIC PARTNER',
-    desc: 'We work side-by-side with businesses, institutions, and research bodies to align vision with execution, offering tailored, innovative strategies for sustainable success.',
-  },
-];
 
 const AboutUs = () => {
   const [active, setActive] = useState('TECH & SYSTEMS');
@@ -76,7 +63,7 @@ const AboutUs = () => {
           </div>
 
           {/* Description */}
-          <CustomParagraph text={activeDesc?.desc} className="text-lg md:text-xl" />
+          <CustomParagraph text={activeDesc?.desc || ''} className="text-lg md:text-xl" />
 
           {/* Expertise Summary */}
           <div className="my-8">

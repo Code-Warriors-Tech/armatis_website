@@ -5,13 +5,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // You can replace with any icon
+import { navItems } from '@/constant/data';
 
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Our Services', href: '/service' },
-  { label: 'Our Team', href: '/team' },
-];
 
 const Header = () => {
   const pathname = usePathname();

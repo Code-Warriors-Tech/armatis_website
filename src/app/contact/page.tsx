@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import Partner from '@/components/partners';
 import CustomPageBanner from '@/components/shared/custom-page-banner';
@@ -10,9 +9,17 @@ import WrapperLayout from '@/layout/wrapper-layout';
 import ContactForm from '@/components/contact/contact-form';
 import ContactDetails from '@/components/contact/contact-details';
 
+// Define the form data structure
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  contact: string;
+  message: string;
+}
 
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     subject: '',
@@ -20,11 +27,12 @@ const ContactPage = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Submitted:', formData);
     // handle submission logic
@@ -32,9 +40,7 @@ const ContactPage = () => {
 
   return (
     <div className="bg-white">
-      <CustomPageBanner
-        text="Contact Us"
-      />
+      <CustomPageBanner text="Contact Us" />
       <div className="mt-20">
         <WrapperLayout className="flex flex-col lg:flex-row items-start justify-between gap-10">
           <div className="w-full lg:w-[746px] border border-gray-200 rounded-lg p-5 lg:p-10">

@@ -7,35 +7,9 @@ import TitleBadge from './shared/title-badge';
 import CustomSubtitle from './shared/custom-subtitle';
 import CustomTinyTitle from './shared/custom-tiny-title';
 import CustomParagraph from './shared/custom-paragraph';
+import { faqs } from '@/constant/data';
 
 const FaqContent = () => {
-  const faqs = [
-    {
-      title: 'What areas does AMARITS specialize in?',
-      content:
-        'AMARITS Consulting offers tailored solutions in IT strategy, research support, project implementation, data analytics, and event management for both public and private sectors.',
-    },
-    {
-      title: 'How can AMARITS help my organization?',
-      content:
-        'We partner with organizations to drive digital transformation, optimize operations through research and data, and provide expert guidance to enhance innovation and impact.',
-    },
-    {
-      title: 'How do I work with AMARITS?',
-      content:
-        'You can contact us via our website, email, or phone. We’ll schedule a discovery call to assess your needs and recommend a customized solution.',
-    },
-    {
-      title: 'What industries do you work with?',
-      content:
-        'We serve clients across education, healthcare, government, NGOs, and the private sector—adapting our solutions to meet unique industry needs.',
-    },
-    {
-      title: 'Do you offer long-term support?',
-      content:
-        'Yes, AMARITS offers ongoing support and post-project consulting to ensure long-term success and impact of implemented solutions.',
-    },
-  ];
 
   return (
     <div className="mt-10">
