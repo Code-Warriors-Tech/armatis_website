@@ -63,7 +63,7 @@ const AboutUs = () => {
           </div>
 
           {/* Description */}
-          <CustomParagraph text={activeDesc?.desc || ''} className="text-lg md:text-xl" />
+          <CustomParagraph text={activeDesc?.desc || ''} className="text-md md:text-lg" />
 
           {/* Expertise Summary */}
           <div className="my-8">
@@ -89,23 +89,6 @@ const AboutUs = () => {
         </div>
         
       </WrapperLayout>
-
-      {/* Values Section */}
-      <div className="py-10 lg:py-20">
-        <WrapperLayout className="mx-auto items-center gap-16">
-          <ul className="list-disc ml-5 text-lg text-gray-700 space-y-1">
-              <li>Innovation & Excellence – We embrace cutting-edge technologies and best practices to deliver high-quality, forward-thinking solutions in Information Systems and Technology consulting and event management.</li>
-              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
-              <li>Client-Centric Approach – Our clients’ success is our priority. We tailor our solutions to their unique needs, providing personalized strategies that drive measurable impact and long-term value.</li>
-              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
-              <li>Sustainability & Social Responsibility – We are committed to sustainable digital transformation and responsible event management, ensuring that our solutions and initiatives contribute positively to society and the environment.</li>
-              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
-              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
-              <li>Collaboration & Partnership – We believe in the power of collaboration. By working closely with our clients, partners, and stakeholders, we foster a culture of knowledge exchange and innovation that drives success.</li>
-            </ul>
-            <p className="text-lg text-gray-700">By staying true to these values, AMARITS Consulting strives to be a trusted and transformative force in Information Systems, Technology Consulting, and Scientific Event Management worldwide.</p>
-        </WrapperLayout>
-      </div>
     </div>
   );
 };
