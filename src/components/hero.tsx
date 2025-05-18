@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import CustomLinkButton from './shared/custom-link-button';
 import { slides } from '@/constant/data';
+import CustomSubtitle from './shared/custom-subtitle';
+import CustomParagraph from './shared/custom-paragraph';
 
 const HeroProfessional = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,13 +28,12 @@ const HeroProfessional = () => {
       {/* Left: Content */}
       <div className="flex flex-col justify-center px-8 md:px-16 z-20 transition-opacity duration-500" style={{ opacity: fade ? 1 : 0 }}>
         <div className="max-w-xl space-y-6">
-          <p className="text-sm uppercase font-medium tracking-widest">
-            IT Strategy • Research • Innovation
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            {heading}
-          </h1>
-          <p className="text-lg">{subtext}</p>
+          <CustomParagraph className="text-sm uppercase font-medium tracking-widest" text="IT Strategy • Research • Innovation" />
+
+          <CustomSubtitle text={heading} className="text-4xl md:text-6xl font-bold leading-tight text-white" />
+
+          <CustomParagraph className="text-lg text-white" text={subtext}/>
+
           <div className="pt-4">
             <CustomLinkButton href="/contact" text="Request a Consultation" />
           </div>
