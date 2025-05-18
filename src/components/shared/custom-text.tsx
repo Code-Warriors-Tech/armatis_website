@@ -3,13 +3,13 @@
 import React, { useEffect, useState, ElementType } from 'react';
 import { useTranslation } from '@/context/translator-provider';
 
-interface CustomHeaderTextProps {
+interface CustomTextProps {
   text: string;
   className?: string;
   as?: ElementType;
 }
 
-const CustomHeaderText: React.FC<CustomHeaderTextProps> = ({
+const CustomText: React.FC<CustomTextProps> = ({
   text,
   className = "text-xl font-semibold",
   as: Tag = "h2",
@@ -28,4 +28,4 @@ const CustomHeaderText: React.FC<CustomHeaderTextProps> = ({
   return <Tag className={className}>{translatedText}</Tag>;
 };
 
-export default CustomHeaderText;
+export default CustomText;

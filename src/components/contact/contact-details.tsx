@@ -14,6 +14,7 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <Mail size={30} />
       </div>
+      
       <CustomTinyTitle text="Email" className="text-black font-semibold text-lg" />
       <a
         href="E-mail: amarits.consulting@gmail.com"
