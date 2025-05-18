@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // You can replace with any icon
 import { navItems } from '@/constant/data';
 import CustomLinkButton from './shared/custom-link-button';
+import LanguageSelector from './language-selector';
 
 
 const Header = () => {
@@ -36,8 +37,12 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Contact Button */}
-        <CustomLinkButton href="/contact" text="Contact Us" />
+        <div className="flex items-center gap-3">
+          <LanguageSelector />
+          {/* Contact Button */}
+          <CustomLinkButton href="/contact" text="Contact Us" />
+        </div>
+
 
         {/* Mobile Menu Toggle */}
         <button

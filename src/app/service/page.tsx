@@ -1,8 +1,8 @@
 import Business from '@/components/business'
 import Partner from '@/components/partners'
 import Process from '@/components/process'
+import DomainTabs from '@/components/service/domain-tab'
 import EventsSection from '@/components/service/event'
-import Services from '@/components/services'
 import CustomPageBanner from '@/components/shared/custom-page-banner'
 import SlidingService from '@/components/sliding-service'
 import React from 'react'
@@ -16,7 +16,8 @@ const ServicePage = () => {
         <div className='mt-10'>
           <Process />
         </div>
-        <Services />
+        {/* <Services /> */}
+        <DomainTabs />
         <SlidingService />
         <EventsSection />
         <Partner />

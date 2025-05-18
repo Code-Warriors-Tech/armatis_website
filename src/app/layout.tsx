@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { TranslationProvider } from "@/context/translator-provider";
 
 export const metadata: Metadata = {
   title: "AMARITS Consulting – IT & Event Solutions",
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+          <TranslationProvider>
+            <Header />
+            {children}
+            <Footer />
+          </TranslationProvider>
       </body>
     </html>
   );

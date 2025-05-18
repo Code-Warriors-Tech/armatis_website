@@ -18,6 +18,59 @@ export const partnerLogos = [
   '/images/partners/image-7.png',
 ];
 
+export const serviceTabs = [
+  {
+    label: "Information Technology and Systems",
+    services: [
+      {
+        title: "IT Strategy and Digital Transformation",
+        description: "Aligning technology with business objectives for long-term growth.",
+      },
+      {
+        title: "System Architecture and Integration",
+        description: "Designing scalable and efficient IT infrastructures.",
+      },
+      {
+        title: "Cybersecurity and Compliance",
+        description: "Ensuring secure, resilient, and compliant digital environments.",
+      },
+      {
+        title: "AI and Data-Driven Solutions",
+        description: "Implementing artificial intelligence and data analytics to enhance decision-making.",
+      },
+      {
+        title: "Software Development and Optimization",
+        description: "Tailoring IT solutions to meet unique business challenges.",
+      },
+    ],
+  },
+  {
+    label: "Management and Technical Events",
+    services: [
+      {
+        title: "Event Strategy and Planning",
+        description: "Designing engaging and impactful conferences, workshops, and seminars.",
+      },
+      {
+        title: "Logistics and Coordination",
+        description: "Managing venue selection, scheduling, and participant engagement.",
+      },
+      {
+        title: "Technology-Driven Event Solutions",
+        description: "Implementing digital platforms for virtual and hybrid events.",
+      },
+      {
+        title: "Content Curation and Speaker Management",
+        description: "Ensuring relevant, high-quality discussions and presentations.",
+      },
+      {
+        title: "Sponsorship and Networking Facilitation",
+        description: "Connecting stakeholders to foster collaboration and funding opportunities.",
+      },
+    ],
+  },
+];
+
 export const portfolioItems = [
   {
     image: '/images/project-1.jpg',
