@@ -12,7 +12,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
   return (
-    <div className="relative w-full h-[529px] rounded-lg overflow-hidden group">
+    <div className="relative w-full h-[400px] rounded-lg overflow-hidden group">
       {/* Background Image */}
       <img src={image} alt="portfolio" className="absolute w-full h-full object-cover top-0 left-0" />
 
@@ -24,8 +24,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
         {/* Left Side Content */}
         <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
           <div>
-            <CustomTinyTitle text={tag} className="uppercase font-semibold text-xl text-[#ED1969]"/>
-            <CustomTinyTitle text={title} className="text-black font-medium text-xl"/>
+            <CustomTinyTitle text={tag} className="uppercase font-semibold text-lg text-[#ED1969]"/>
+            <CustomTinyTitle text={title} className="text-black font-medium text-lg"/>
           </div>
 
           {/* Right Side Icon Button */}

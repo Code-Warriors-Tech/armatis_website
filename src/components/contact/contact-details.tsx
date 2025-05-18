@@ -16,10 +16,10 @@ const ContactDetails = () => (
       </div>
       <CustomTinyTitle text="Email" className="text-black font-semibold text-lg" />
       <a
-        href="E-mail: amarits.c@gmail.com"
+        href="E-mail: amarits.consulting@gmail.com"
         className="text-blue-600 hover:underline"
       >
-        amarits.c@gmail.com
+        amarits.consulting@gmail.com
       </a>
     </div>
 
@@ -37,8 +37,6 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <MapPin size={30} />
       </div>
-      <CustomTinyTitle text="Headquarters" className="text-black font-semibold text-lg" />
-      <CustomParagraph text=" IFZA Business Park, Building A2, Dubai Silicon Oasis, Mushraif, Dubai, United Arab Emirates " />
       <CustomTinyTitle text="Worldwide:" className="text-black font-semibold text-lg" />
       <CustomParagraph text=" Pc. 9 de Abril, 26, 4200-422 Porto, Portugal " />
     </div>

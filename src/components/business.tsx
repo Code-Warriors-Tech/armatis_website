@@ -33,13 +33,13 @@ const Business = () => {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <CustomLinkButton text="ABOUT OUR COMPANY" />
+            <CustomLinkButton href="/about" text="ABOUT OUR COMPANY" />
             <Link href="#" className="text-black underline hover:text-[#ED1969]">DISCOVER HOW WE WORK</Link>
           </div>
         </div>
 
         <div className="flex justify-center">
-          <img src="/images/about-11.jpg" alt="Business Image" className="rounded-lg w-full max-w-lg object-cover" />
+          <img src="/images/business.jpg" alt="Business Image" className="rounded-lg w-full max-w-lg object-cover" />
         </div>
       </WrapperLayout>
     </div>

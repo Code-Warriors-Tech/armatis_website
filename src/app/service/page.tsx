@@ -1,6 +1,7 @@
 import Business from '@/components/business'
 import Partner from '@/components/partners'
 import Process from '@/components/process'
+import EventsSection from '@/components/service/event'
 import Services from '@/components/services'
 import CustomPageBanner from '@/components/shared/custom-page-banner'
 import SlidingService from '@/components/sliding-service'
@@ -17,6 +18,7 @@ const ServicePage = () => {
         </div>
         <Services />
         <SlidingService />
+        <EventsSection />
         <Partner />
     </div>
   )

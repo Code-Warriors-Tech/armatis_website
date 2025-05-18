@@ -32,7 +32,7 @@ const Process: React.FC = () => {
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <TitleBadge text="WORK PROCESS" className="mx-auto" />
-            <CustomSubtitle text="Our project exeution process" className="text-black" />
+            <CustomSubtitle text="Our project execution process" className="text-black" />
           </div>
         </div>
         <div className="lg:flex justify-center items-center gap-10">

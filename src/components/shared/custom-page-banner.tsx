@@ -10,7 +10,7 @@ const CustomPageBanner: React.FC<CustomPageBannerProps> = ({ text }) => {
     <div
       className="w-full h-[300px] flex flex-col justify-center items-center text-white text-center relative bg-cover bg-center mt-20"
       style={{
-        backgroundImage: "url('/images/page-title.jpg')",
+        backgroundImage: "url('/images/banner.jpg')",
       }}
     >
       <div className="bg-black/40 absolute inset-0" /> {/* Dark overlay */}

@@ -45,7 +45,7 @@ const ChoseUs: React.FC = () => {
               className="text-lg md:text-xl"
             />
 
-            <CustomLinkButton text='More About Us' />
+            <CustomLinkButton href="/about" text='More About Us' />
           </div>
 
             <div className='hidden lg:block'>

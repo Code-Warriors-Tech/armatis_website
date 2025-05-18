@@ -21,7 +21,7 @@ const Portfolio = () => {
             <CustomSubtitle text="Tailored Consulting for Technology & Research" />
           </div>
 
-          <CustomLinkButton text="View All Projects" />
+          <CustomLinkButton href="/products" text="View All Projects" />
         </div>
       </WrapperLayout>
 

@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import WrapperLayout from '@/layout/wrapper-layout'
 import React from 'react'
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 
-const IconCard = ({ icon }: { icon: React.ReactNode }) => {
+const IconCard = ({ icon, link }: { icon: React.ReactNode, link: string }) => {
   return (
-    <div className='bg-white text-black w-[40px] h-[40px] rounded-full flex items-center justify-center hover:bg-gray-200 transition'>
+    <a href={link} className='bg-white text-black w-[40px] h-[40px] rounded-full flex items-center justify-center hover:bg-gray-200 transition'>
       {icon}
-    </div>
+    </a>
   )
 }
 
@@ -48,17 +48,17 @@ const Footer = () => {
             paragraph='We strive to business solutions ideal for small & large projects with customized project requirements.'
           >
             <div className='mt-3 flex items-center gap-3'>
-              <IconCard icon={<Facebook size={20}/>} />
-              <IconCard icon={<Twitter size={20} />} />
-              <IconCard icon={<Instagram size={20} />} />
-              <IconCard icon={<Linkedin size={20} />} />
+              <IconCard link="https://www.facebook.com/profile.php?id=61573456057874" icon={<Facebook size={20}/>} />
+              <IconCard link="https://amarits.com/team/#" icon={<Youtube size={20} />} />
+              <IconCard link='https://amarits.com/team/#' icon={<Instagram size={20} />} />
+              <IconCard link="https://www.linkedin.com/company/amarits-consulting" icon={<Linkedin size={20} />} />
             </div>
           </FooterCard>
 
           <FooterCard title='Contact Us' paragraph=''>
             <div className='space-y-3'>
-              <ContectCard title='Address' data='IFZA Business Park, Building A2, Dubai Silicon Oasis, Mushraif, Dubai, United Arab Emirates' />
-              <ContectCard title='Mail' data='amarits.c@gmail.com' />
+              <ContectCard title='Address' data='Pc. 9 de Abril, 26, 4200-422 Porto Portugal' />
+              <ContectCard title='Mail' data='amarits.consulting@gmail.com' />
               <ContectCard title='Phone/WhatsApp/Telegram' data='+351 961539027' />
             </div>
           </FooterCard>

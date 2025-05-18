@@ -34,7 +34,7 @@ const HeroProfessional = () => {
           </h1>
           <p className="text-lg">{subtext}</p>
           <div className="pt-4">
-            <CustomLinkButton text="Request a Consultation" />
+            <CustomLinkButton href="/contact" text="Request a Consultation" />
           </div>
         </div>
       </div>

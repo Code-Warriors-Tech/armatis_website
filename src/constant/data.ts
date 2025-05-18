@@ -8,6 +8,7 @@ export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Our Services', href: '/service' },
+  { label: 'Products', href: '/products' },
   { label: 'Our Team', href: '/team' },
 ];
 
@@ -19,59 +20,95 @@ export const partnerLogos = [
 
 export const portfolioItems = [
   {
-    image: '/images/portfolio-01.jpg',
-    tag: 'IT Strategy',
-    title: 'Digital Transformation & System Architecture',
+    image: '/images/project-1.jpg',
+    tag: 'iEventHive',
+    title: 'Registration Management System for Events and Training',
   },
   {
-    image: '/images/portfolio-02.jpg',
-    tag: 'Data & AI',
-    title: 'AI & Data Analytics for Strategic Decision-Making',
+    image: '/images/project-2.jpg',
+    tag: 'Love4you',
+    title: 'Dating, Friendship and Meeting App & Portal',
   },
   {
-    image: '/images/portfolio-03.jpg',
-    tag: 'Cybersecurity',
-    title: 'Cybersecurity & Compliance Consulting',
+    image: '/images/project-3.jpg',
+    tag: 'Integral Medical System',
+    title: 'Virtual Platform for Medicine and Telemedicine',
   },
   {
-    image: '/images/portfolio-04.jpg',
-    tag: 'Events',
-    title: 'Technical & Scientific Event Management',
+    image: '/images/project-4.jpg',
+    tag: 'Eok Arcade',
+    title: 'Virtual Mathematics Platform',
   },
 ];
 
 export const services = [
     {
-      image: '/images/service-01.jpg',
+      image: '/images/cybersecurity.jpg',
       icon: '/icons/icon-10.png',
-      title: 'Financial Guidance',
-      desc: 'We focus on the best practices for it solutions and services.',
+      title: 'Cybersecurity and Compliance',
+      desc: 'Ensuring secure, resilient, and compliant digital environments.',
     },
     {
-      image: '/images/service-02.jpg',
+      image: '/images/system.jpg',
       icon: '/icons/icon-11.png',
-      title: 'Business Campaign',
-      desc: 'We focus on the best practices for it solutions and services.',
+      title: 'System Architecture and Integration',
+      desc: 'Designing scalable and efficient IT infrastructures.',
     },
     {
-      image: '/images/service-03.jpg',
+      image: '/images/strategy.jpg',
       icon: '/icons/icon-12.png',
-      title: 'Business Planning',
-      desc: 'We focus on the best practices for it solutions and services.',
+      title: 'IT Strategy and Digital Transformation',
+      desc: 'Aligning technology with business objectives for long-term growth',
     },
     {
-      image: '/images/service-10.jpg',
+      image: '/images/ai.jpg',
       icon: '/icons/icon-13.png',
-      title: 'Business Strategy',
-      desc: 'We focus on the best practices for it solutions and services.',
+      title: 'AI and Data-Driven Solutions',
+      desc: ' Implementing artificial intelligence and data analytics to enhance decision-making.',
+    },
+    {
+      image: '/images/software.jpg',
+      icon: '/icons/icon-13.png',
+      title: 'Software Development and Optimization',
+      desc: 'Tailoring IT solutions to meet unique business challenges.',
     },
 ];
+
+// data/eventServices.ts
+export const eventServices = [
+  {
+    title: 'Strategic Event Planning',
+    desc: 'We design engaging, goal-oriented events aligned with your vision.',
+  },
+  {
+    title: 'End-to-End Event Management',
+    desc: 'Complete logistics and execution from concept to completion.',
+  },
+  {
+    title: 'Digital and Hybrid Event Solutions',
+    desc: 'Virtual and hybrid options for broader participation.',
+  },
+  {
+    title: 'Technical and Scientific Program Development',
+    desc: 'Curated programs with top speakers and relevant content.',
+  },
+  {
+    title: 'Sponsorship and Networking Facilitation',
+    desc: 'We connect you with sponsors and strategic partners.',
+  },
+  {
+    title: 'On-Site and Virtual Event Coordination',
+    desc: 'Flawless coordination for both virtual and physical events.',
+  },
+];
+
 
 export const teamMembers = [
     {
       image: '/images/team/alvaro.jpg',
       name: 'Álvaro Rocha',
       position: 'Chairman',
+      desc: 'Expert in IT Strategy and Digital Transformation, Enterprise Architecture, Information Systems Planning, Management Information Systems, Maturity Models, Information Systems Quality, Intelligent Information Systems, Requirements Engineering, Cybersecurity, e-Government, e-Health, e-Education, Events Strategy and Planning, and Events Management.',
       socialMedia: {
         facebook: 'https://facebook.com/johndoe',
         twitter: 'https://twitter.com/johndoe',
@@ -82,6 +119,7 @@ export const teamMembers = [
       image: '/images/team/profilepicture-955x1024.jpg',
       name: 'Tiago Carvalho',
       position: 'Consultant',
+      desc: 'Tiago Carvalho is a Project Manager and Business Analyst with over 10 years of experience in e-commerce and industrial sectors. He specializes in delivering complex software solutions, ensuring strategic alignment between business needs and technology. At Toogas, he focused on Magento and AWS for e-commerce integration, while at Segin, he led scalable solutions and CI/CD pipelines using .NET and Azure. His Agile approach enhances team productivity and operational efficiency. Passionate about digital transformation, Tiago bridges the gap between business objectives and technology solutions, driving impactful results and customer satisfaction.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',
@@ -92,6 +130,7 @@ export const teamMembers = [
       image: '/images/team/Jose-Braga.jpg',
       name: 'José Braga de Vasconcelos',
       position: 'Consultant',
+      desc: 'Expert in Artificial Intelligence and Machine Learning, Knowledge Management, Business Intelligence and Data-Driven Solutions, and Software Engineering.',
       socialMedia: {
         facebook: 'https://facebook.com/johndoe',
         twitter: 'https://twitter.com/johndoe',
@@ -102,6 +141,7 @@ export const teamMembers = [
       image: '/images/team/image-8-268x300.png',
       name: 'Fadele Ayotunde',
       position: 'Consultant',
+      desc: 'Expert in Network Security & Information Security Management, Cybersecurity Engineering & Cryptography, Blockchain and Smart Contracts Security, Intrusion Detection & Prevention Systems, Cyber Threat Intelligence & Countermeasures, Privacy-Preserving AI Models in Cybersecurity, Web & Mobile Application Development.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',
@@ -112,6 +152,7 @@ export const teamMembers = [
       image: '/images/team/Shashi-300x300.jpg',
       name: 'Shashi Kant Gupta',
       position: 'Consultant',
+      desc: 'Expertise in Software development, Website development and Mobile application development in any technology.',
       socialMedia: {
         facebook: 'https://facebook.com/johndoe',
         twitter: 'https://twitter.com/johndoe',
@@ -122,6 +163,7 @@ export const teamMembers = [
       image: '/images/team/1b5dda0f-3681-400d-9fbc-d0e77a675e8c-3-1-286x300.jpg',
       name: 'António José Araújo',
       position: 'Consultant',
+      desc: 'Expert in technical skills in Power BI, Advanced Excel, Cybersecurity, WordPress, and Python. Additionally, he has experience in data analysis, machine learning, project management with agile methodologies, and database administration. He is also recognized for his ability to effectively communicate technical concepts and provide technology consulting across various fields.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',
@@ -132,6 +174,7 @@ export const teamMembers = [
       image: '/images/team/Anton-Vasiliev-295x300.jpg',
       name: 'Anton Vasiliev',
       position: 'Consultant',
+      desc: 'Expert in System Architecture and Integration, Servers Architecture and Management, Back-End Programming, Software Engineering, Web Programming, and Technology-Driven Event Solutions.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',
@@ -142,6 +185,7 @@ export const teamMembers = [
       image: '/images/team/ArturRocha-269x300.jpg',
       name: 'Artur Rocha',
       position: 'Consultant',
+      desc: 'Expert in Design, Photography, Video, Multimedia, Social Media, Office Tools, Events Organization, and Events Logistics and Coordination.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',
@@ -152,6 +196,7 @@ export const teamMembers = [
       image: '/images/team/image-7-291x300.png',
       name: 'Miguel Sousa',
       position: 'Consultant',
+      desc: 'Expert in Digital Marketing, Social Media, Office Tools, Human Resources Management, Public Administration, Digital Transformation, Learning and Skills Development, European Funding and Projects Management; Strategic Business Advice; Event Strategy, Planning and Management.',
       socialMedia: {
         facebook: 'https://facebook.com/janesmith',
         twitter: 'https://twitter.com/janesmith',

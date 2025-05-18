@@ -24,7 +24,7 @@ const Experts = () => {
               <TitleBadge text="What We Are the Experts" className="mx-auto" />
               <CustomSubtitle text="Trusted by the world's fastest growing business" className="text-white" />
 
-              <CustomLinkButton text='Get Started' />
+              <CustomLinkButton href="/service" text='Get Started' />
             </div>
           </WrapperLayout>
         </div>

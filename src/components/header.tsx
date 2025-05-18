@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // You can replace with any icon
 import { navItems } from '@/constant/data';
+import CustomLinkButton from './shared/custom-link-button';
 
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         {/* Logo */}
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={50} height={50} className="object-contain" />
+          <Image src="/images/logo.png" alt="Logo" width={120} height={120} className="object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -36,12 +37,7 @@ const Header = () => {
         </nav>
 
         {/* Contact Button */}
-        <Link
-          href="/contact"
-          className="hidden lg:inline-block bg-[#ED1969] text-white rounded-full px-6 py-2 font-bold transition hover:bg-[#d0175f]"
-        >
-          Contact Us
-        </Link>
+        <CustomLinkButton href="/contact" text="Contact Us" />
 
         {/* Mobile Menu Toggle */}
         <button
