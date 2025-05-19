@@ -2,12 +2,11 @@
 import React, { useState } from 'react';
 import Partner from '@/components/partners';
 import CustomPageBanner from '@/components/shared/custom-page-banner';
-import CustomParagraph from '@/components/shared/custom-paragraph';
-import CustomSubtitle from '@/components/shared/custom-subtitle';
 import TitleBadge from '@/components/shared/title-badge';
 import WrapperLayout from '@/layout/wrapper-layout';
 import ContactForm from '@/components/contact/contact-form';
 import ContactDetails from '@/components/contact/contact-details';
+import CustomText from '@/components/shared/custom-text';
 
 // Define the form data structure
 interface FormData {
@@ -45,8 +44,8 @@ const ContactPage: React.FC = () => {
         <WrapperLayout className="flex flex-col lg:flex-row items-start justify-between gap-10">
           <div className="w-full lg:w-[746px] border border-gray-200 rounded-lg p-5 lg:p-10">
             <TitleBadge text={'Contact Us'} />
-            <CustomSubtitle text="Let's get in touch" className="text-black text-xl" />
-            <CustomParagraph text="Let us know who you are and what you're looking for below, and we'll get back to you within 24 hours." />
+            <CustomText as="h1" text="Let's get in touch" className="text-black text-xl"  />
+            <CustomText as="p" text="Let us know who you are and what you're looking for below, and we'll get back to you within 24 hours." className="text-sm text-gray-500"  />
             <ContactForm
               formData={formData}
               handleChange={handleChange}

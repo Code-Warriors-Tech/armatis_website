@@ -2,7 +2,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import CustomTinyTitle from '../shared/custom-tiny-title';
+import CustomText from '../shared/custom-text';
 
 interface PortfolioCardProps {
   image: string;
@@ -24,8 +24,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
         {/* Left Side Content */}
         <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
           <div>
-            <CustomTinyTitle text={tag} className="uppercase font-semibold text-lg text-[#ED1969]"/>
-            <CustomTinyTitle text={title} className="text-black font-medium text-lg"/>
+            <CustomText as="h3" text={tag} className="uppercase font-semibold text-lg text-[#ED1969]"  />
+            <CustomText as="p" text={title} className="text-black font-medium text-lg"  />
           </div>
 
           {/* Right Side Icon Button */}

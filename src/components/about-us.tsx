@@ -2,11 +2,9 @@
 import WrapperLayout from "@/layout/wrapper-layout";
 import React, { useState } from 'react';
 import TitleBadge from "./shared/title-badge";
-import CustomSubtitle from "./shared/custom-subtitle";
-import CustomParagraph from "./shared/custom-paragraph";
-import CustomTinyTitle from "./shared/custom-tiny-title";
 import CountUp from "react-countup";
 import { tabs } from "@/constant/data";
+import CustomText from "./shared/custom-text";
 
 
 const AboutUs = () => {
@@ -32,11 +30,11 @@ const AboutUs = () => {
             <div className="flex items-center gap-4">
               <img src="/icons/icon-01.png" alt="icon" className="w-[50px]" />
               <div className="py-6 md:py-0">
-                <h3 className="text-lg font-semibold text-black">
-                  <CountUp end={10} duration={2} /> years
+                <h3 className="text-lg font-semibold text-black flex items-center gap-2">
+                  <CountUp end={10} duration={2} /> <CustomText as="p" text="years" className="text-lg" />
                 </h3>
 
-                <CustomParagraph text="Working Experience" className="text-sm " />
+                <CustomText as="p" text="Working Experience" className="text-sm" />
               </div>
             </div>
           </div>
@@ -45,33 +43,35 @@ const AboutUs = () => {
         {/* Text Section */}
         <div>
           <TitleBadge text="ABOUT US" />
-          <CustomSubtitle text="Modern consulting for digital innovation" />
+          <CustomText as="h1" text="Modern consulting for digital innovation" className="text-3xl md:text-5xl font-bold " />
 
           {/* Tabs */}
           <div className="flex flex-wrap gap-6 my-4">
             {tabs.map((item, index) => (
-              <p
-                key={index}
-                className={`cursor-pointer text-sm font-semibold ${
-                  active === item.text ? 'text-[#ED1969] underline' : ''
-                }`}
-                onClick={() => setActive(item.text)}
-              >
-                {item.text}
-              </p>
+              <div key={index} onClick={() => setActive(item.text)}>
+                <CustomText 
+                  as="p" 
+                  text={item.text}
+                  className={`cursor-pointer text-sm font-semibold ${
+                    active === item.text ? 'text-[#ED1969] underline' : ''
+                  }`}
+                />
+              </div>
             ))}
           </div>
 
           {/* Description */}
-          <CustomParagraph text={activeDesc?.desc || ''} className="text-md md:text-lg" />
+          <CustomText as="p" text={activeDesc?.desc || ''} className="text-md md:text-lg" />
 
           {/* Expertise Summary */}
           <div className="my-8">
-            <p className="font-semibold mb-2 text-lg text-black">Values</p>
-            <p className="text-md text-gray-700 mb-4">
+            
+            <CustomText as="p" text="Values" className="font-semibold mb-2 text-lg text-black" />
+            <CustomText as="p" text="
               At AMARITS Consulting, our values define who we are and guide our actions in every project, partnership, and engagement. We are committed to upholding the highest standards of integrity, innovation, and excellence in everything we do.
-              We are committed to delivering high-quality, tailored solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence.
-            </p>
+              We are committed to delivering high-quality, tailored solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence." 
+              className="text-md md:text-lg" 
+            />
           </div>
 
           {/* Team Lead */}
@@ -82,8 +82,8 @@ const AboutUs = () => {
               className="w-[60px] h-[60px] rounded-full object-cover"
             />
             <div>
-              <CustomTinyTitle text="Álvaro Rocha " className="text-black font-medium"/>
-              <CustomParagraph text="Chairman, AMARITS Consulting" className="text-lg md:text-xl" />
+              <CustomText as="p" text="Álvaro Rocha " className="text-black font-medium" />
+              <CustomText as="h4" text="Chairman, AMARITS Consulting" className="text-lg md:text-xl" />
             </div>
           </div>
         </div>

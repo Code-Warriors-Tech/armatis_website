@@ -1,7 +1,6 @@
 import React from 'react';
-import CustomParagraph from '../shared/custom-paragraph';
-import CustomTinyTitle from '../shared/custom-tiny-title';
 import Link from 'next/link';
+import CustomText from '../shared/custom-text';
 
 interface ServiceCardProps {
   image: string;
@@ -25,8 +24,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon, title, desc }) =
           </div>
         </div>
         <div className="px-5">
-          <CustomTinyTitle text={title} className="text-xl font-semibold mb-2"/>
-          <CustomParagraph text={desc} className="text-gray-600 text-sm" />
+          <CustomText as="h2" text={title} className="text-lg font-semibold mb-2" />
+          <CustomText as="p" text={desc} className="text-gray-600 text-sm" />
           <div className="mb-3">
             <Link href="/service" className="text-black underline hover:text-[#ED1969] text-sm">EXPLORE MORE</Link>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomText from './custom-text';
 
 interface CustomFormInputProps {
   label: string;
@@ -21,9 +22,7 @@ const CustomFormInput: React.FC<CustomFormInputProps> = ({
 }) => {
   return (
     <div className="mb-6">
-      <label htmlFor={name} className="block text-sm font-bold text-black mb-2">
-        {label}
-      </label>
+      <CustomText as="label" text={label} className="block text-sm font-bold text-black mb-2" />
       {isTextArea ? (
         <textarea
           id={name}

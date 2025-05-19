@@ -8,8 +8,8 @@ import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 import TitleBadge from './shared/title-badge';
 import CustomLinkButton from './shared/custom-link-button';
-import CustomSubtitle from './shared/custom-subtitle';
 import { portfolioItems } from '@/constant/data';
+import CustomText from './shared/custom-text';
 
 const Portfolio = () => {
   return (
@@ -18,7 +18,7 @@ const Portfolio = () => {
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-0">
           <div className="max-w-xl">
             <TitleBadge text="OUR WORK" />
-            <CustomSubtitle text="Tailored Consulting for Technology & Research" />
+            <CustomText as="h1" text="Tailored Consulting for Technology & Research" className='text-3xl md:text-5xl font-bold text-black'  />
           </div>
 
           <CustomLinkButton href="/products" text="View All Projects" />

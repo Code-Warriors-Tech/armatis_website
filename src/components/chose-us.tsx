@@ -2,10 +2,8 @@ import React from 'react';
 import WrapperLayout from '@/layout/wrapper-layout';
 import TitleBadge from './shared/title-badge';
 import CustomLinkButton from './shared/custom-link-button';
-import CustomSubtitle from './shared/custom-subtitle';
-import CustomParagraph from './shared/custom-paragraph';
-import CustomTinyTitle from './shared/custom-tiny-title';
 import { reasonData } from '@/constant/data';
+import CustomText from './shared/custom-text';
 
 // Interface for ReasonCard props
 interface ReasonCardProps {
@@ -21,8 +19,8 @@ const ReasonCard: React.FC<ReasonCardProps> = ({ icon, title, desc }) => {
         <img src={icon} alt="icon" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
       </div>
       <div>
-        <CustomTinyTitle text={title} className="text-black font-medium text-lg"/>
-        <CustomParagraph text={desc} className="text-sm" />
+        <CustomText as="h3" text={title} className="text-black font-medium text-lg" />
+        <CustomText as="p" text={desc} className="text-sm" />
       </div>
     </div>
   );
@@ -39,9 +37,8 @@ const ChoseUs: React.FC = () => {
           </div>
           <div className="space-y-5">
             <TitleBadge text="Why Choose Us" />
-            <CustomSubtitle text=" Why choose our business solutions?" />
-            <CustomParagraph 
-              text="Our team is a diverse network of consultants and industry professionals with a global mindset and a collaborative culture. We work to understand your issues and are driven to ask better questions." 
+            <CustomText as="h1" text="Why choose our business solutions?" className='text-3xl md:text-5xl font-bold text-black' />
+            <CustomText as="p" text="Our team is a diverse network of consultants and industry professionals with a global mindset and a collaborative culture. We work to understand your issues and are driven to ask better questions."
               className="text-lg md:text-xl"
             />
 

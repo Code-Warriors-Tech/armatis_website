@@ -22,7 +22,7 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
         method: 'POST',
         url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2',
         headers: {
-          'x-rapidapi-key': '9a651b55cdmsh271e3be03325872p15e8d3jsnc88dc83c8ff5',
+          'x-rapidapi-key': '61fa949b60mshb99695e9f4aba21p19a2d6jsn61cb0afed319',
           'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
           'Content-Type': 'application/json',
         },

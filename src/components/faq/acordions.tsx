@@ -2,8 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import CustomTinyTitle from '../shared/custom-tiny-title';
-import CustomParagraph from '../shared/custom-paragraph';
+import CustomText from '../shared/custom-text';
 
 interface AccordionProps {
   title: string;
@@ -24,10 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
           isOpen ? 'bg-[#ED1969] text-white' : ''
         }`}
       >
-        <CustomTinyTitle
-          text={title}
-          className={`text-lg font-medium ${isOpen ? 'text-white' : 'text-black'}`}
-        />
+        <CustomText as="h3" text={title} className={`text-lg font-medium ${isOpen ? 'text-white' : 'text-black'}`} />
         <span>
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
         </span>
@@ -41,7 +37,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
         className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
       >
         <div className="p-4 text-gray-600">
-          <CustomParagraph text={content} className="text-lg md:text-xl" />
+          <CustomText as="p" text={content} className="text-sm" />
         </div>
       </div>
     </div>

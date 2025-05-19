@@ -2,6 +2,7 @@
 import WrapperLayout from '@/layout/wrapper-layout'
 import React from 'react'
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
+import CustomText from './shared/custom-text'
 
 const IconCard = ({ icon, link }: { icon: React.ReactNode, link: string }) => {
   return (
@@ -14,8 +15,8 @@ const IconCard = ({ icon, link }: { icon: React.ReactNode, link: string }) => {
 const ContectCard = ({ title, data }: { title: string; data: string }) => {
   return (
     <div className='flex items-start gap-3'>
-      <span className='font-bold'>{title}:</span>
-      <p className='text-[16px]'>{data}</p>
+      <CustomText as="span" text={`${title}:`} className='font-bold'  />
+      <CustomText as="p" text={data} className='text-[16px]'  />
     </div>
   )
 }
@@ -31,8 +32,8 @@ const FooterCard = ({
 }) => {
   return (
     <div>
-      <h1 className='mb-5 font-bold text-2xl text-white'>{title}</h1>
-      <p className="text-lg md:text-xl text-white">{paragraph}</p>
+      <CustomText as="h1" text={title} className="mb-5 font-bold text-2xl text-white"  />
+      <CustomText as="p" text={paragraph} className="text-lg md:text-xl text-white"  />
       <div className='mt-5'>{children}</div>
     </div>
   )

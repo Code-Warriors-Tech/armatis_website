@@ -2,7 +2,7 @@ import WrapperLayout from '@/layout/wrapper-layout'
 import React from 'react'
 import TitleBadge from './shared/title-badge'
 import CustomLinkButton from './shared/custom-link-button'
-import CustomSubtitle from './shared/custom-subtitle'
+import CustomText from './shared/custom-text'
 
 const Experts = () => {
   return (
@@ -22,7 +22,7 @@ const Experts = () => {
           <WrapperLayout>
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <TitleBadge text="What We Are the Experts" className="mx-auto" />
-              <CustomSubtitle text="Trusted by the world's fastest growing business" className="text-white" />
+              <CustomText as="h1" text="Trusted by the world's fastest growing business" className='text-3xl md:text-6xl font-bold text-white' />
 
               <CustomLinkButton href="/service" text='Get Started' />
             </div>

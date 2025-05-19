@@ -8,6 +8,7 @@ import { Menu, X } from 'lucide-react'; // You can replace with any icon
 import { navItems } from '@/constant/data';
 import CustomLinkButton from './shared/custom-link-button';
 import LanguageSelector from './language-selector';
+import CustomText from './shared/custom-text';
 
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
                 pathname === item.href ? 'text-[#ED1969] border-b-2 border-[#ED1969]' : 'text-gray-800 hover:text-[#ED1969]'
               }`}
             >
-              {item.label}
+              <CustomText as="span" text={item.label} className="text-sm"  />
             </Link>
           ))}
         </nav>
@@ -40,17 +41,19 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <LanguageSelector />
           {/* Contact Button */}
-          <CustomLinkButton href="/contact" text="Contact Us" />
+          <div className="hidden lg:block">
+            <CustomLinkButton href="/contact" text="Contact Us"  />
+          </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-gray-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
 
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden text-gray-800"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
       </div>
 
       {/* Mobile Nav Dropdown */}
@@ -66,7 +69,7 @@ const Header = () => {
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.label}
+                <CustomText as="span" text={item.label} className="text-sm" />
               </Link>
             ))}
             <Link

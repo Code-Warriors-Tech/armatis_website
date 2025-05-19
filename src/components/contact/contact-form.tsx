@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomFormInput from '../shared/custom-input';
+import CustomText from '../shared/custom-text';
 
 interface ContactFormProps {
   formData: {
@@ -72,7 +73,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, handleChange, handl
       type="submit"
       className="mt-4 bg-[#ED1969] text-white px-6 py-2 rounded hover:bg-[#d3155c] transition"
     >
-      Send Message
+      <CustomText as="span" text="Send Message" className="text-sm"  />
     </button>
   </form>
 );
