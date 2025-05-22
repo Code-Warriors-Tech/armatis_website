@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import WrapperLayout from '@/layout/wrapper-layout'
-import React from 'react'
+'use client';
+import WrapperLayout from '@/layout/wrapper-layout';
+import React, { useState } from 'react';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 import CustomText from './shared/custom-text'
+import { joinNewsLetterApi } from '@/services/news-letter.service';
+import { toast } from 'react-toastify';
 
 const IconCard = ({ icon, link }: { icon: React.ReactNode, link: string }) => {
   return (
@@ -40,6 +43,38 @@ const FooterCard = ({
 }
 
 const Footer = () => {
+  const [email, setEmail] = useState<string>('');
+  const [loading, setLoading] = useState(false)
+
+  const validateEmail = (email: string): boolean => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const handleJoinNewsLetter = async () => {
+    if (!email.trim()) {
+      toast.error("Email is required.")
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address.")
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await joinNewsLetterApi(email);
+      toast.success(response.message)
+      setEmail(''); // Clear input after successful subscription
+    } catch (error: any) {
+      toast.error(error.response.data.message)
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className='bg-[#14212B] text-white'>
       <WrapperLayout className='mx-auto py-20'>
@@ -50,9 +85,9 @@ const Footer = () => {
           >
             <div className='mt-3 flex items-center gap-3'>
               <IconCard link="https://www.facebook.com/profile.php?id=61573456057874" icon={<Facebook size={20}/>} />
+              <IconCard link="https://www.linkedin.com/company/amarits-consulting" icon={<Linkedin size={20} />} />
               <IconCard link="https://amarits.com/team/#" icon={<Youtube size={20} />} />
               <IconCard link='https://amarits.com/team/#' icon={<Instagram size={20} />} />
-              <IconCard link="https://www.linkedin.com/company/amarits-consulting" icon={<Linkedin size={20} />} />
             </div>
           </FooterCard>
 
@@ -71,10 +106,16 @@ const Footer = () => {
                   type='text'
                   className='w-full text-black text-sm outline-0'
                   placeholder='Subscribe With Us'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <button className='bg-[#ED1969] rounded-full px-10 py-5 transition font-bold'>
-                Subscribe Now
+              <button
+                className='bg-[#ED1969] rounded-full px-10 py-5 transition font-bold'
+                onClick={handleJoinNewsLetter}
+                disabled={loading}
+              >
+                {loading ? 'Joining NewsLetter...' : 'Subscribe Now'}
               </button>
             </div>
           </FooterCard>

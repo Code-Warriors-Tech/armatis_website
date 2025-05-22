@@ -22,7 +22,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
       {/* Card Content - slides in from bottom on hover */}
       <div className="relative z-20 h-full flex items-end">
         {/* Left Side Content */}
-        <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
+        <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
           <div>
             <CustomText as="h3" text={tag} className="uppercase font-semibold text-lg text-[#ED1969]"  />
             <CustomText as="p" text={title} className="text-black font-medium text-lg"  />

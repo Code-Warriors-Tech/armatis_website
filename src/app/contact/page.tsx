@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import React, { useState } from 'react';
 import Partner from '@/components/partners';
@@ -7,6 +8,8 @@ import WrapperLayout from '@/layout/wrapper-layout';
 import ContactForm from '@/components/contact/contact-form';
 import ContactDetails from '@/components/contact/contact-details';
 import CustomText from '@/components/shared/custom-text';
+import { toast } from 'react-toastify';
+import { sendMessageApi } from '@/services/contact.service';
 
 // Define the form data structure
 interface FormData {
@@ -18,6 +21,7 @@ interface FormData {
 }
 
 const ContactPage: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -31,10 +35,35 @@ const ContactPage: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const validateEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
-    // handle submission logic
+
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast.error("Please fill in all required fields (Name, Email, Message).");
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await sendMessageApi(formData);
+      toast.success(response.message);
+      setFormData({ name: '', email: '', subject: '', contact: '', message: '' }); // clear form
+    } catch (error: any) {
+      toast.error(error?.response?.data?.message || "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -50,6 +79,7 @@ const ContactPage: React.FC = () => {
               formData={formData}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
+              loading={loading}
             />
           </div>
           <ContactDetails />

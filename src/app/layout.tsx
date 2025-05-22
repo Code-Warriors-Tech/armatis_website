@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { TranslationProvider } from "@/context/translator-provider";
+import { ToastContainer } from 'react-toastify';
 
 export const metadata: Metadata = {
   title: "AMARITS Consulting – IT & Event Solutions",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
           <TranslationProvider>
+            <ToastContainer />
             <Header />
             {children}
             <Footer />

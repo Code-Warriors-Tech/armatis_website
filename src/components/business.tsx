@@ -27,7 +27,7 @@ const Business = () => {
               <div className="flex items-center justify-center w-12 aspect-square border-2 border-green-500 rounded-full bg-white">
                 <Check className="text-green-500" size={24} />
               </div>
-              <CustomText as="p" text="Over 10,000 satisfied clients trust our services to achieve their business goals." className="text-lg md:text-xl" />
+              <CustomText as="p" text="A broad range of satisfied clients rely on our services to successfully achieve their business goals" className="text-lg md:text-xl" />
             </div>
           </div>
 

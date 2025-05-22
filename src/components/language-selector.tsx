@@ -13,10 +13,9 @@ const LanguageSelector = () => {
         className="border border-gray-300 text-black rounded px-2 py-1 text-sm focus:outline-none"
       >
         <option value="en">English</option>
-        <option value="fr">Français</option>
+        <option value="pt">Português</option>
         <option value="es">Español</option>
-        <option value="de">Deutsch</option>
-        <option value="zh">中文</option>
+        <option value="fr">Français</option>
       </select>
     </div>
   );

@@ -12,9 +12,10 @@ interface ContactFormProps {
   };
   handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  loading: boolean;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ formData, handleChange, handleSubmit }) => (
+const ContactForm: React.FC<ContactFormProps> = ({ formData, handleChange, handleSubmit, loading }) => ( 
   <form onSubmit={handleSubmit} className="mt-5 space-y-5">
     <div className="flex flex-col md:flex-row items-center justify-between lg:gap-5">
       <div className="w-full">
@@ -71,9 +72,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, handleChange, handl
 
     <button
       type="submit"
+        disabled={loading}
       className="mt-4 bg-[#ED1969] text-white px-6 py-2 rounded hover:bg-[#d3155c] transition"
     >
-      <CustomText as="span" text="Send Message" className="text-sm"  />
+      <CustomText as="span" text={loading ? "Sending Message..." : "Send Message"} className="text-sm"  />
     </button>
   </form>
 );

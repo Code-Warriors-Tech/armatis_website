@@ -7,9 +7,9 @@ interface ReasonCardProps {
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Our Services', href: '/service' },
+  { label: 'Services', href: '/service' },
   { label: 'Products', href: '/products' },
-  { label: 'Our Team', href: '/team' },
+  { label: 'Team', href: '/team' },
 ];
 
 export const partnerLogos = [
