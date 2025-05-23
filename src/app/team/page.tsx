@@ -20,6 +20,7 @@ const TeamPage = () => {
                             image={member.image}
                             name={member.name}
                             position={member.position}
+                            desc={member.desc}
                             socialMedia={member.socialMedia}
                         />
                     ))}

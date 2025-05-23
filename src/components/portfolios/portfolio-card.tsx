@@ -2,7 +2,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import CustomTinyTitle from '../shared/custom-tiny-title';
+import CustomText from '../shared/custom-text';
 
 interface PortfolioCardProps {
   image: string;
@@ -12,7 +12,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
   return (
-    <div className="relative w-full h-[529px] rounded-lg overflow-hidden group">
+    <div className="relative w-full h-[400px] rounded-lg overflow-hidden group">
       {/* Background Image */}
       <img src={image} alt="portfolio" className="absolute w-full h-full object-cover top-0 left-0" />
 
@@ -22,10 +22,10 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, tag, title }) => {
       {/* Card Content - slides in from bottom on hover */}
       <div className="relative z-20 h-full flex items-end">
         {/* Left Side Content */}
-        <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
+        <div className="bg-white w-[90%] mx-auto py-5 px-8 rounded-xl transform transition-transform duration-500 ease-in-out mb-5 flex justify-between items-center gap-4">
           <div>
-            <CustomTinyTitle text={tag} className="uppercase font-semibold text-xl text-[#ED1969]"/>
-            <CustomTinyTitle text={title} className="text-black font-medium text-xl"/>
+            <CustomText as="h3" text={tag} className="uppercase font-semibold text-lg text-[#ED1969]"  />
+            <CustomText as="p" text={title} className="text-black font-medium text-lg"  />
           </div>
 
           {/* Right Side Icon Button */}

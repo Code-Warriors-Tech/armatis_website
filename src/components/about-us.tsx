@@ -2,11 +2,9 @@
 import WrapperLayout from "@/layout/wrapper-layout";
 import React, { useState } from 'react';
 import TitleBadge from "./shared/title-badge";
-import CustomSubtitle from "./shared/custom-subtitle";
-import CustomParagraph from "./shared/custom-paragraph";
-import CustomTinyTitle from "./shared/custom-tiny-title";
 import CountUp from "react-countup";
 import { tabs } from "@/constant/data";
+import CustomText from "./shared/custom-text";
 
 
 const AboutUs = () => {
@@ -32,11 +30,11 @@ const AboutUs = () => {
             <div className="flex items-center gap-4">
               <img src="/icons/icon-01.png" alt="icon" className="w-[50px]" />
               <div className="py-6 md:py-0">
-                <h3 className="text-lg font-semibold text-black">
-                  <CountUp end={10} duration={2} /> years
+                <h3 className="text-lg font-semibold text-black flex items-center gap-2">
+                  <CountUp end={10} duration={2} /> <CustomText as="p" text="years" className="text-lg" />
                 </h3>
 
-                <CustomParagraph text="Working Experience" className="text-sm " />
+                <CustomText as="p" text="Working Experience" className="text-sm" />
               </div>
             </div>
           </div>
@@ -45,33 +43,35 @@ const AboutUs = () => {
         {/* Text Section */}
         <div>
           <TitleBadge text="ABOUT US" />
-          <CustomSubtitle text="Modern consulting for digital innovation" />
+          <CustomText as="h1" text="Modern consulting for digital innovation" className="text-3xl md:text-5xl font-bold " />
 
           {/* Tabs */}
           <div className="flex flex-wrap gap-6 my-4">
             {tabs.map((item, index) => (
-              <p
-                key={index}
-                className={`cursor-pointer text-sm font-semibold ${
-                  active === item.text ? 'text-[#ED1969] underline' : ''
-                }`}
-                onClick={() => setActive(item.text)}
-              >
-                {item.text}
-              </p>
+              <div key={index} onClick={() => setActive(item.text)}>
+                <CustomText 
+                  as="p" 
+                  text={item.text}
+                  className={`cursor-pointer text-sm font-semibold ${
+                    active === item.text ? 'text-[#ED1969] underline' : ''
+                  }`}
+                />
+              </div>
             ))}
           </div>
 
           {/* Description */}
-          <CustomParagraph text={activeDesc?.desc || ''} className="text-lg md:text-xl" />
+          <CustomText as="p" text={activeDesc?.desc || ''} className="text-md md:text-lg" />
 
           {/* Expertise Summary */}
           <div className="my-8">
-            <p className="font-semibold mb-2 text-lg text-black">Values</p>
-            <p className="text-md text-gray-700 mb-4">
+            
+            <CustomText as="p" text="Values" className="font-semibold mb-2 text-lg text-black" />
+            <CustomText as="p" text="
               At AMARITS Consulting, our values define who we are and guide our actions in every project, partnership, and engagement. We are committed to upholding the highest standards of integrity, innovation, and excellence in everything we do.
-              We are committed to delivering high-quality, tailored solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence.
-            </p>
+              We are committed to delivering high-quality, tailored solutions that empower organizations, researchers, and professionals to achieve their goals with efficiency, integrity, and excellence." 
+              className="text-md md:text-lg" 
+            />
           </div>
 
           {/* Team Lead */}
@@ -82,30 +82,13 @@ const AboutUs = () => {
               className="w-[60px] h-[60px] rounded-full object-cover"
             />
             <div>
-              <CustomTinyTitle text="Álvaro Rocha " className="text-black font-medium"/>
-              <CustomParagraph text="Chairman, AMARITS Consulting" className="text-lg md:text-xl" />
+              <CustomText as="p" text="Álvaro Rocha " className="text-black font-medium" />
+              <CustomText as="h4" text="Chairman, AMARITS Consulting" className="text-lg md:text-xl" />
             </div>
           </div>
         </div>
         
       </WrapperLayout>
-
-      {/* Values Section */}
-      <div className="py-10 lg:py-20">
-        <WrapperLayout className="mx-auto items-center gap-16">
-          <ul className="list-disc ml-5 text-lg text-gray-700 space-y-1">
-              <li>Innovation & Excellence – We embrace cutting-edge technologies and best practices to deliver high-quality, forward-thinking solutions in Information Systems and Technology consulting and event management.</li>
-              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
-              <li>Client-Centric Approach – Our clients’ success is our priority. We tailor our solutions to their unique needs, providing personalized strategies that drive measurable impact and long-term value.</li>
-              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
-              <li>Sustainability & Social Responsibility – We are committed to sustainable digital transformation and responsible event management, ensuring that our solutions and initiatives contribute positively to society and the environment.</li>
-              <li>Integrity & Ethics – We uphold the highest ethical standards, ensuring transparency, trust, and responsibility in all our interactions, from consulting engagements to organizing technical and scientific events.</li>
-              <li>Continuous Learning & Adaptability – In a rapidly evolving technological landscape, we champion lifelong learning and adaptability, staying ahead of emerging trends to offer cutting-edge solutions and ensure knowledge-driven event experiences.</li>
-              <li>Collaboration & Partnership – We believe in the power of collaboration. By working closely with our clients, partners, and stakeholders, we foster a culture of knowledge exchange and innovation that drives success.</li>
-            </ul>
-            <p className="text-lg text-gray-700">By staying true to these values, AMARITS Consulting strives to be a trusted and transformative force in Information Systems, Technology Consulting, and Scientific Event Management worldwide.</p>
-        </WrapperLayout>
-      </div>
     </div>
   );
 };

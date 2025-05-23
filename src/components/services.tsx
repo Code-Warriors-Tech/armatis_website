@@ -3,13 +3,13 @@ import React from 'react';
 import WrapperLayout from '@/layout/wrapper-layout';
 import ServiceCard from './service/service-card';
 import TitleBadge from './shared/title-badge';
-import CustomSubtitle from './shared/custom-subtitle';
 
 // Import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { services } from '@/constant/data';
+import CustomText from './shared/custom-text';
 
 const Services = () => {
 
@@ -19,7 +19,7 @@ const Services = () => {
         <WrapperLayout>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <TitleBadge text="SERVICES" className="mx-auto" />
-            <CustomSubtitle text="We are dedicated to serve you all time" className="text-white"/>
+            <CustomText as="h1" text="We are dedicated to serve you all time" className='text-3xl md:text-4xl font-bold text-white' />
           </div>
 
           <Swiper

@@ -6,6 +6,9 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // You can replace with any icon
 import { navItems } from '@/constant/data';
+import CustomLinkButton from './shared/custom-link-button';
+import LanguageSelector from './language-selector';
+import CustomText from './shared/custom-text';
 
 
 const Header = () => {
@@ -17,7 +20,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         {/* Logo */}
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={50} height={50} className="object-contain" />
+          <Image src="/images/logo.png" alt="Logo" width={120} height={120} className="object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -30,26 +33,27 @@ const Header = () => {
                 pathname === item.href ? 'text-[#ED1969] border-b-2 border-[#ED1969]' : 'text-gray-800 hover:text-[#ED1969]'
               }`}
             >
-              {item.label}
+              <CustomText as="span" text={item.label} className="text-sm"  />
             </Link>
           ))}
         </nav>
 
-        {/* Contact Button */}
-        <Link
-          href="/contact"
-          className="hidden lg:inline-block bg-[#ED1969] text-white rounded-full px-6 py-2 font-bold transition hover:bg-[#d0175f]"
-        >
-          Contact Us
-        </Link>
+        <div className="flex items-center gap-3">
+          <LanguageSelector />
+          {/* Contact Button */}
+          <div className="hidden lg:block">
+            <CustomLinkButton href="/contact" text="Contact Us"  />
+          </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-gray-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden text-gray-800"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+
       </div>
 
       {/* Mobile Nav Dropdown */}
@@ -65,7 +69,7 @@ const Header = () => {
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.label}
+                <CustomText as="span" text={item.label} className="text-sm" />
               </Link>
             ))}
             <Link

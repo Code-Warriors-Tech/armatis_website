@@ -1,7 +1,7 @@
 import WrapperLayout from '@/layout/wrapper-layout';
 import React from 'react';
 import TitleBadge from './shared/title-badge';
-import CustomSubtitle from './shared/custom-subtitle';
+import CustomText from './shared/custom-text';
 
 interface ProcessCardProps {
   icon: string;
@@ -20,7 +20,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({ icon, title, index }) => {
           <img src={icon} alt="icon" className="w-[60px]" />
         </div>
       </div>
-      <h2 className="text-center text-xl font-bold mt-5">{title}</h2>
+      <CustomText as="h2" text={title} className="text-center text-xl font-bold mt-5" />
     </div>
   );
 };
@@ -32,7 +32,7 @@ const Process: React.FC = () => {
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <TitleBadge text="WORK PROCESS" className="mx-auto" />
-            <CustomSubtitle text="Our project exeution process" className="text-black" />
+            <CustomText as="h1" text="Our project execution process" className="text-black text-3xl md:text-4xl font-bold " />
           </div>
         </div>
         <div className="lg:flex justify-center items-center gap-10">

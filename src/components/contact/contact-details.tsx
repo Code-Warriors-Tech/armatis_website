@@ -1,6 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import CustomTinyTitle from '../shared/custom-tiny-title';
-import CustomParagraph from '../shared/custom-paragraph';
+import CustomText from '../shared/custom-text';
 
 const iconStyle =
   'w-20 h-20 flex items-center justify-center rounded-full bg-white text-[#ED1969] mx-auto';
@@ -14,12 +13,13 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <Mail size={30} />
       </div>
-      <CustomTinyTitle text="Email" className="text-black font-semibold text-lg" />
+      
+      <CustomText as="h3" text="Email" className="text-black font-semibold text-lg" />
       <a
-        href="E-mail: amarits.c@gmail.com"
+        href="E-mail: amarits.consulting@gmail.com"
         className="text-blue-600 hover:underline"
       >
-        amarits.c@gmail.com
+        amarits.consulting@gmail.com
       </a>
     </div>
 
@@ -28,8 +28,8 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <Phone size={30} />
       </div>
-      <CustomTinyTitle text="Phone" className="text-black font-semibold text-lg" />
-      <CustomParagraph text="+351 961539027" />
+      <CustomText as="h3" text="Phone" className="text-black font-semibold text-lg" />
+      <CustomText as="p" text="+351 961539027" className='text-sm text-gray-500' />
     </div>
 
     {/* Office Location Section */}
@@ -37,10 +37,8 @@ const ContactDetails = () => (
       <div className={iconStyle}>
         <MapPin size={30} />
       </div>
-      <CustomTinyTitle text="Headquarters" className="text-black font-semibold text-lg" />
-      <CustomParagraph text=" IFZA Business Park, Building A2, Dubai Silicon Oasis, Mushraif, Dubai, United Arab Emirates " />
-      <CustomTinyTitle text="Worldwide:" className="text-black font-semibold text-lg" />
-      <CustomParagraph text=" Pc. 9 de Abril, 26, 4200-422 Porto, Portugal " />
+      <CustomText as="h3" text="Worldwide:" className="text-black font-semibold text-lg" />
+      <CustomText as="p" text=" Pc. 9 de Abril, 26, 4200-422 Porto, Portugal" className='text-sm text-gray-500' />
     </div>
     
   </div>

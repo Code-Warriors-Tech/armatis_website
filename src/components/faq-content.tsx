@@ -4,10 +4,8 @@ import CountUp from 'react-countup';
 import WrapperLayout from '@/layout/wrapper-layout';
 import Accordion from './faq/acordions';
 import TitleBadge from './shared/title-badge';
-import CustomSubtitle from './shared/custom-subtitle';
-import CustomTinyTitle from './shared/custom-tiny-title';
-import CustomParagraph from './shared/custom-paragraph';
 import { faqs } from '@/constant/data';
+import CustomText from './shared/custom-text';
 
 const FaqContent = () => {
 
@@ -17,7 +15,7 @@ const FaqContent = () => {
         {/* Left Section */}
         <div>
           <TitleBadge text="Why Partner With Us" />
-          <CustomSubtitle text="Empowering Impact Through Strategy, Technology & Research" />
+          <CustomText as="h1" text="Empowering Impact Through Strategy, Technology & Research" className='text-3xl md:text-5xl font-bold text-black' />
 
           <div className="flex items-center gap-5 mt-6">
             <img
@@ -31,12 +29,12 @@ const FaqContent = () => {
                 <h3 className="text-[#ED1969] text-4xl font-bold">
                   <CountUp end={10} duration={2} />+
                 </h3>
-                <h4 className="text-black text-2xl font-bold">Years of Expertise</h4>
+                <CustomText as="h4" text="Years of Expertise" className="text-black text-2xl font-bold" />
               </div>
 
               <div className="border-t pt-2 border-gray-200">
-                <CustomTinyTitle text="Proven Track Record" className="text-black font-medium" />
-                <CustomParagraph text="Delivering results-driven solutions across Africa and beyond." className="text-sm" />
+                <CustomText as="h1" text="Proven Track Record" className="text-black font-medium" />
+                <CustomText as="p" text="Delivering results-driven solutions across Africa and beyond." className="text-sm"/>
               </div>
             </div>
           </div>
