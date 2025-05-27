@@ -13,7 +13,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className=" bg-white text-[#575A7B]">
-      <HeroCarousel />
+       <HeroCarousel />
       <AboutUs />
       <Process />
       <Services />
